@@ -29,3 +29,20 @@ footer {
   align-self: baseline;
   flex-direction: row;
 }
+.login { 
+  float: right;
+  border: solid;
+  color: greenyellow;
+  text-align: center;
+  padding: 10px; 
+}
+
+.button1:hover {
+  background-color: rgb(182, 252, 41);
+  color: white;
+}
+
+.button2:hover {
+  background-color: rgb(86, 124, 247);
+  color: white;
+}
