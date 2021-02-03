@@ -1,0 +1,23 @@
+<h1>Welcome <%= current_user.email %> </h1>
+
+
+<%= button_to 'Search for movies', movies_path, method: :get %></li>
+
+<section id="friends">
+  <% current_user.buddies.each do |buddy|%>
+    <% friend = User.find(buddy.friend_id) %>
+    <%= friend.email %>
+  <% end %>
+</section>
+
+<section id="viewing_parties" >
+    <h2>Viewing Parties</h2>
+      <section id='hosting'>
+        <h3>Hosted Parties</h3>
+        <%= binding.pry %>
+
+      </section>
+      <section>
+
+      </section>
+</section>
