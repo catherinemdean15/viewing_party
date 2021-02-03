@@ -11,14 +11,10 @@ class User < ApplicationRecord
   has_many :parties, through: :parties_users
 
   def hosted_parties
-    parties_users.where(host: true).map do |parties_user|
-      parties_user.party
-    end
+    parties.joins(:parties_users).where('parties_users.host = true')
   end
 
   def invited_parties
-    parties_users.where(host: false).map do |parties_user|
-      parties_user.party
-    end
+    parties.joins(:parties_users).where('parties_users.host = false')
   end
 end
