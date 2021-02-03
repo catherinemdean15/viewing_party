@@ -15,7 +15,6 @@ RSpec.describe 'dashboard index' do
 
     PartiesUser.create!(party_id: @party_1.id, user_id: @user.id, host: true)
     PartiesUser.create!(party_id: @party_2.id, user_id: @user.id, host: false)
-
     visit dashboard_user_path(@user.id)
   end
 
