@@ -11,8 +11,14 @@ class User < ApplicationRecord
   has_many :parties, through: :parties_users
 
   def hosted_parties
-    require 'pry'; binding.pry
+    parties_users.where(host: true).map do |parties_user|
+      parties_user.party
+    end
   end
 
-  def invitied_parties; end
+  def invited_parties
+    parties_users.where(host: false).map do |parties_user|
+      parties_user.party
+    end
+  end
 end
