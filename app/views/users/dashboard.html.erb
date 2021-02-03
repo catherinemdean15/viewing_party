@@ -14,10 +14,18 @@
     <h2>Viewing Parties</h2>
       <section id='hosting'>
         <h3>Hosted Parties</h3>
-        <%= binding.pry %>
-
+        <ul>
+          <% current_user.hosted_parties.each do |party| %>
+            <li><%= party.movie.title %></li>
+          <% end %>
+        </ul>
       </section>
-      <section>
-
+      <section id='invited'>
+        <h3>Invited Parties</h3>
+        <ul>
+          <% current_user.invited_parties.each do |party| %>
+            <li><%= party.movie.title %></li>
+          <% end %>
+        </ul>
       </section>
 </section>
