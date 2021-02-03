@@ -1,5 +1,5 @@
 class Party < ApplicationRecord
-  has_many :movies
+  belongs_to :movie
   has_many :parties_users
   has_many :users, through: :parties_users
 end

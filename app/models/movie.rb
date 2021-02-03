@@ -1,3 +1,3 @@
 class Movie < ApplicationRecord
-  belongs_to :party
+  has_many :parties
 end
