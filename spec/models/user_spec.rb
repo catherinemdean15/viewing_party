@@ -11,6 +11,8 @@ RSpec.describe User, type: :model do
   describe 'relationships' do
     it { should have_many :buddies }
     it { should have_many(:friends).through(:buddies) }
+    it { should have_many(:parties_users) }
+    it { should have_many(:parties).through(:parties_users) }
   end
 
   describe 'instance methods' do
