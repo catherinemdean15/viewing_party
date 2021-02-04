@@ -15,7 +15,7 @@ RSpec.describe "new user session" do
     fill_in "email", with: "test5@gmail.com"
     fill_in "password", with: "test5test5"
     click_on 'Login'
-    expect(current_path).to eq(root_path)
+    expect(current_path).to eq(dashboard_user_path(user))
     expect(page).to have_content("You are logged in!")
   end
 

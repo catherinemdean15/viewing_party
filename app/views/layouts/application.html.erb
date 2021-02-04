@@ -11,7 +11,7 @@
   <body>
      <div class ="login">
       <% if current_user %>
-        Logged in as <%= current_user.email %>
+        Welcome <%= current_user.email %>
         <%= link_to "Log Out", logout_path %>
       <% else %>
         <%= link_to "registration", registration_path, class: 'button1' %>

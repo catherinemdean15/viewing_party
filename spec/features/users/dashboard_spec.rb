@@ -87,12 +87,4 @@ RSpec.describe 'dashboard index' do
     end
   end
 
-  it "has a friends section that has a field to add friend" do
-    visit dashboard_user_path(@user)
-
-    expect(page).to have_button("Add Friend")
-    friend = User.create(email: "test4@gmail.com", password: "test4test4", is_registered?: true)
-    click_button "Add Friend"
-    
-  end
 end
