@@ -16,9 +16,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def dashboard
-    @user = User.find(params[:id])
-  end
+  def dashboard; end
 
   private
 
