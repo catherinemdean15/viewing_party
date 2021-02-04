@@ -19,7 +19,7 @@ class PermissionService
 
   def registered_permissions
     return true if controller == 'welcome' && action == 'index'
-    return true if controller == 'users' && action.in?(%w[new create destroy])
+    return true if controller == 'users' && action.in?(%w[new create destroy dashboard])
     return true if controller == 'sessions' && action.in?(%w[new create destroy])
   end
 
