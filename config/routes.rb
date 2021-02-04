@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :users, only: %i[create destroy] do
     member { get 'dashboard' }
+    resources :friends, only: [:create]
   end
 
   resources :sessions, only: [:create]
