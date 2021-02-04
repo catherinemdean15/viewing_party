@@ -9,12 +9,13 @@ RSpec.describe "users new page" do
 
   it "can create a new user" do 
     visit registration_path
+    user = User.create(email: "test5@gmail.com", password: "test5test5", is_registered?: true)
 
-    fill_in "user[email]", with: "test5@gmail.com"
-    fill_in "user[password]", with: "test5test5"
-    fill_in "user[password_confirmation]", with: "test5test5"
+    fill_in "user[email]", with: user.email
+    fill_in "user[password]", with: user.password
+    fill_in "user[password_confirmation]", with: user.password
     click_on 'Register'
-    expect(current_path).to eq(root_path)
+    expect(current_path).to eq(dashboard_user_path(user))
     expect(page).to have_content("You signed up successfully")
   end
 end

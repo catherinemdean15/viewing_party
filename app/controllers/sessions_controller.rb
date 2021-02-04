@@ -1,11 +1,15 @@
 class SessionsController < ApplicationController
-  def new; end
+  def new
+    if current_user
+      redirect_to root_path, notice: 'You are already logged in!'
+    end
+  end
 
   def create
     user = User.find_by(email: params[:email].downcase)
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to root_path, notice: 'You are logged in!'
+      redirect_to dashboard_user_path(user), notice: 'You are logged in!'
     else
       flash.now[:alert] = 'Invalid login email, or password'
       render 'new'
