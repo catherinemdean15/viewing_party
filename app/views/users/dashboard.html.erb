@@ -1,0 +1,17 @@
+
+<h3>Upcoming Parties</h3>
+  <% @user.invited_parties.uniq.each do |party| %>
+    <section id="friend-party-info-<%=party.id%>">
+      <h4><%= party.movie.title%></h4>
+      <p><%= party.start_time.strftime('%B %d, %Y %l:%M %p')%></p>
+      <p><%= 'Invited'%></p>
+    </section>
+  <% end %>
+
+ <% @user.hosted_parties.uniq.each do |party| %>
+    <section id="my-party-info-<%=party.id%>">
+      <h4><%= party.movie.title%></h4>
+      <p><%= party.start_time.strftime('%B %d, %Y %l:%M %p')%></p>
+      <p><%= 'Hosting'%></p>
+    </section>
+  <% end %>
