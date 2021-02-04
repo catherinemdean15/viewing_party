@@ -17,6 +17,8 @@
         <ul>
           <% current_user.hosted_parties.each do |party| %>
             <li><%= party.movie.title %></li>
+            <li><%= party.start_time.strftime('%B %d, %Y %l:%M %p')%> </li>
+            <li><%= 'Hosting'%></li>
           <% end %>
         </ul>
       </section>
@@ -25,6 +27,8 @@
         <ul>
           <% current_user.invited_parties.each do |party| %>
             <li><%= party.movie.title %></li>
+            <li><%= party.start_time.strftime('%B %d, %Y %l:%M %p')%> </li>
+            <li><%= 'Invited'%></li>
           <% end %>
         </ul>
       </section>
