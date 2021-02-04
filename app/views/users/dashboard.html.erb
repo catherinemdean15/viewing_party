@@ -1,17 +1,35 @@
+<h1>Welcome <%= current_user.email %> </h1>
 
-<h3>Upcoming Parties</h3>
-  <% current_user.invited_parties.uniq.each do |party| %>
-    <section id="friend-party-info-<%=party.id%>">
-      <h4><%= party.movie.title%></h4>
-      <p><%= party.start_time.strftime('%B %d, %Y %l:%M %p')%></p>
-      <p><%= 'Invited'%></p>
-    </section>
-  <% end %>
 
- <% current_user.hosted_parties.uniq.each do |party| %>
-    <section id="my-party-info-<%=party.id%>">
-      <h4><%= party.movie.title%></h4>
-      <p><%= party.start_time.strftime('%B %d, %Y %l:%M %p')%></p>
-      <p><%= 'Hosting'%></p>
-    </section>
+<%= button_to 'Search for movies', movies_path, method: :get %></li>
+
+<section id="friends">
+  <% current_user.buddies.each do |buddy|%>
+    <% friend = User.find(buddy.friend_id) %>
+    <%= friend.email %>
   <% end %>
+</section>
+
+<section id="viewing_parties" >
+    <h2>Viewing Parties</h2>
+      <section id='hosting'>
+        <h3>Hosted Parties</h3>
+        <ul>
+          <% current_user.hosted_parties.each do |party| %>
+            <li><%= party.movie.title %></li>
+            <li><%= party.start_time.strftime('%B %d, %Y %l:%M %p')%> </li>
+            <li><%= 'Hosting'%></li>
+          <% end %>
+        </ul>
+      </section>
+      <section id='invited'>
+        <h3>Invited Parties</h3>
+        <ul>
+          <% current_user.invited_parties.each do |party| %>
+            <li><%= party.movie.title %></li>
+            <li><%= party.start_time.strftime('%B %d, %Y %l:%M %p')%> </li>
+            <li><%= 'Invited'%></li>
+          <% end %>
+        </ul>
+      </section>
+</section>
