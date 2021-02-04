@@ -1,0 +1,17 @@
+<h1>dashboard</h1>
+<h2>Welcome <%= @user.email %></h2>
+
+<section class="add-friends">
+  <%= form_with url: user_friendships_path(@user), local: true do |f| %>
+  <p>Add Friend <%= f.text_field :email %></p>
+    <%= f.submit :"Add Friend" %>
+  <% end %>
+</section>
+
+<section class="my-friends">
+  <ul>Your Friends: 
+    <% @user.friends.each do |friend| %>
+    <li><%= friend.email %></li>
+    <% end %>
+  </ul> 
+</section>
