@@ -5,7 +5,7 @@
 
 <section id="friends">
   <h3>Friends</h3>
-    <% if current_user.followings == [] %>
+    <% if current_user.has_no_followers? %>
       <%= "You currently have no friends" %>
     <% else %>
       <% current_user.followings.each do |friend|%>
