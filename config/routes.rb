@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
-  resources :movies, only: [:index]
+  resources :movies, only: [:index, :show]
+  get 'discover', to: 'movies#discover', as: 'discover'
 end
