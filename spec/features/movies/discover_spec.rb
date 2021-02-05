@@ -35,5 +35,13 @@ RSpec.describe 'As an authenticated user', type: :feature do
       expect(current_path).to eq(movies_path(@user))
       expect(page).to have_content("ZIPPER: Coney Island's Last Wild Ride")
     end
+
+    it 'I should see a flash notice message for results not found' do
+      fill_in 'movie[search]', with: 'jklih'
+      click_button 'Find Movie'
+
+      expect(current_path).to eq(movies_path(@user))
+      expect(page).to have_content('There are no movies with that title. Please try again')
+    end
   end
 end

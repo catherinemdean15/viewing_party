@@ -7,7 +7,6 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       flash[:notice] = 'You signed up successfully'
-      # user.update_columns(:is_registered? => true)
       user.update(is_registered?: true)
       redirect_to root_path
     else
