@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     if user.save
       flash[:notice] = 'You signed up successfully'
       user.update(is_registered?: true)
+      session[:user_id] = user.id
       redirect_to dashboard_user_path(user)
     else
       flash.now[:errors] = user.errors.full_messages

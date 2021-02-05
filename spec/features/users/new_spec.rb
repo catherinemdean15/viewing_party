@@ -14,10 +14,10 @@ RSpec.describe "users new page" do
     fill_in "user[email]", with: user_email
     fill_in "user[password]", with: user_password
     fill_in "user[password_confirmation]", with: user_password
-    allow_any_instance_of(ApplicationController).to receive(:current_user)
-    click_on 'Register'
+    click_button 'Register'
     
-    visit dashboard_user_path(user)
+    user = User.find_by(email: user_email)
+    expect(current_path).to eq(dashboard_user_path(user))
     expect(page).to have_content("You signed up successfully")
   end
 end
