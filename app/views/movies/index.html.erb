@@ -1,0 +1,10 @@
+<section class="top-movies">
+  <table id="top-forty">
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie[:title] %></td>
+        <td>Vote Average: <%= movie[:vote_average] %></td>
+      </tr>
+    <% end %>
+  </table>
+</section>

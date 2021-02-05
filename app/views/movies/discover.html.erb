@@ -1,0 +1,6 @@
+<%= button_to 'Find Top Rated Movies', movies_path(current_user), params:{search: 'top_movies'}, method: :get%> 
+
+ <%= form_with model: Movie, method: :get, url: movies_path(current_user), local: true do |f| %>
+  <%= f.text_field :search, value: 'Search by Movie Title' %>
+  <%= f.submit 'Find Movie'%>
+<% end %>

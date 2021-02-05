@@ -23,4 +23,4 @@
 /config/application.yml
 
 #Ignore DS.store
-DS.store
+.DS_Store
