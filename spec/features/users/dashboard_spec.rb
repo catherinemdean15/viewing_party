@@ -86,4 +86,5 @@ RSpec.describe 'dashboard index' do
       end
     end
   end
+
 end

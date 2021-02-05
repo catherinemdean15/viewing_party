@@ -8,14 +8,17 @@ class UsersController < ApplicationController
     if user.save
       flash[:notice] = 'You signed up successfully'
       user.update(is_registered?: true)
-      redirect_to root_path
+      session[:user_id] = user.id
+      redirect_to dashboard_user_path(user)
     else
       flash.now[:errors] = user.errors.full_messages
       render 'new'
     end
   end
 
-  def dashboard; end
+  def dashboard
+    @user = User.find(params[:id])
+  end
 
   private
 

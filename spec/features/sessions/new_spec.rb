@@ -15,7 +15,15 @@ RSpec.describe "new user session" do
     fill_in "email", with: "test5@gmail.com"
     fill_in "password", with: "test5test5"
     click_on 'Login'
-    expect(current_path).to eq(root_path)
+    expect(current_path).to eq(dashboard_user_path(user))
     expect(page).to have_content("You are logged in!")
+  end
+
+  it "allows user access after sign in " do 
+    user = User.create(email: "test5@gmail.com", password: "test5test5", is_registered?: true)
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    user.authenticate(user.password)
+    visit dashboard_user_path(user)
+    expect(page).to have_content("Welcome #{user.email}")
   end
 end
