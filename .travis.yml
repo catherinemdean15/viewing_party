@@ -8,8 +8,7 @@ script:
 - bundle exec rspec
 deploy:
   provider: heroku
-  api_key:
-    secure: NPBUgAg0tUgz4I6InjIObgWNOmlH9A5u1Fe/DxS0Y4uMp9KVjWoQNZvIpkdqgY6VfuCSNGhB9SamrDRHVUcMKSF3P17ew1uZC0/OvlyrJ98NjUOPUxbs0f6OdERumvhzzKtLM1SryjbCDsZ+/Jb98OTFLx+i1Z8rrxu4VaKrE5fkaeYd4yue2upjhKE7My6BZZnklkqb3H9bbnsN+/GAJEfoA2K3QJEIbHqHe953c9Farj/cFriYbmKpI3+b2Nh6ZcU7Cmr9x8tpXsD6SU2VfrtzPhJgd/Z+PTT2ayNzAJ/+QWne5JC6fdMzWbXscB2PItcTpNqELkorDo1aFADvqJPUqDGQ9GAyg/LCB7l79TlbVHHrpJdtzdAzaGdzJMiGe8QkfagRIrPVfvCj4gkfsvqjfjaacBzIsCEn9jzB1wIwngLKlsnWxovUCq6IFg3Ljuy0pqciyyUOCh2Fpok6R4bw+nPIqY1mFTskQa0R1sl+G0PW6je8CJC81v3zDSaEN054qkjMsFtJ0cANeLJEj9wlTHfKCZ7vqMpISVWoi2YoaYyv4G/YY9KaHV8ZrkYYWqKzR6/zxsMaRX62AxKo6apLOeAXQQzE+Y9bpfk9G2tYGd9gIUuGOkneR55CPItGhqXaOyhVbaxPd/OlSXonjnDc/Y7oPpWxepcBmhnSyTY=
+  api_key: ENV['heroku_api_key']
   app: stormy-bastion-67887
   run: rails db:migrate
   on:
