@@ -10,14 +10,14 @@ RSpec.describe 'As an authenticated user', type: :feature do
       visit discover_path(@user)
     end
 
-    it 'I see the "Find Top Rated Movies" button' do
+    it 'I see the "Find Top Rated Movies" button', :vcr do
       click_button 'Find Top Rated Movies'
 
       expect(current_path).to eq(movies_path(@user))
       expect(page).to have_css("table#top-forty tr", count: 40)
     end
     
-    it 'I should also see a form with a button to search for movies by title' do
+    it 'I should also see a form with a button to search for movies by title', :vcr do
       fill_in 'movie[search]', with: 'Nacho'
       click_button 'Find Movie'
 
@@ -28,7 +28,7 @@ RSpec.describe 'As an authenticated user', type: :feature do
       expect(page).to_not have_css("table#top-forty tr", count: 41)
     end
 
-    it 'I should see results for movie titles with less than 20 results' do
+    it 'I should see results for movie titles with less than 20 results', :vcr do
       fill_in 'movie[search]', with: 'Zipper'
       click_button 'Find Movie'
 
@@ -36,7 +36,7 @@ RSpec.describe 'As an authenticated user', type: :feature do
       expect(page).to have_content("ZIPPER: Coney Island's Last Wild Ride")
     end
 
-    it 'I should see a flash notice message for results not found' do
+    it 'I should see a flash notice message for results not found', :vcr do
       fill_in 'movie[search]', with: 'jklih'
       click_button 'Find Movie'
 

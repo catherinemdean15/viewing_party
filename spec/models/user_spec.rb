@@ -22,8 +22,8 @@ RSpec.describe User, type: :model do
       @user.authenticate(@user.password)
       @friend = User.create!(email: 'friend1@email.com', password: 'password', is_registered?: true)
 
-      @movie_1 = Movie.create!(title: 'Mulan', run_time: '1 hour 12 min', genre: 'Family')
-      @movie_2 = Movie.create!(title: 'Oceans 11', run_time: '2 hours 10 min', genre: 'Action')
+      @movie_1 = Movie.create!(title: 'Mulan', run_time: '1 hour 12 min')
+      @movie_2 = Movie.create!(title: 'Oceans 11', run_time: '2 hours 10 min')
       @party_1 = @movie_1.parties.create!(start_time: 'beginning time', end_time: 'ending_time')
       @party_2 = @movie_2.parties.create!(start_time: 'beginning time', end_time: 'ending_time')
 
