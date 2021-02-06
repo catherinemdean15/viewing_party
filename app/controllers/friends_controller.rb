@@ -4,11 +4,10 @@ class FriendsController < ApplicationController
     if new_friend
       Friend.create!(friend1_id: params[:user_id], friend2_id: new_friend.id)
       flash[:notice] = "You have added #{new_friend.email} as a friend"
-      redirect_to dashboard_user_path(current_user)
     else
       flash[:notice] = 'Please enter valid email address'
-      redirect_to dashboard_user_path(current_user)
     end
+    redirect_to dashboard_user_path(current_user)
   end
 
   private

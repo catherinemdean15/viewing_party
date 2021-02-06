@@ -18,7 +18,7 @@ class User < ApplicationRecord
     parties.joins(:parties_users).where('parties_users.host = true')
   end
 
-  def has_no_followers?
+  def no_followers?
     followings.empty?
   end
 end
