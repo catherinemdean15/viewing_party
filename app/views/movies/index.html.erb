@@ -2,7 +2,7 @@
   <table id="top-forty">
     <% @movies.each do |movie| %>
       <tr>
-        <td><%= movie[:title] %></td>
+        <td><%= link_to "#{movie[:title]}", movie_path(movie[:id]) %></td>
         <td>Vote Average: <%= movie[:vote_average] %></td>
       </tr>
     <% end %>

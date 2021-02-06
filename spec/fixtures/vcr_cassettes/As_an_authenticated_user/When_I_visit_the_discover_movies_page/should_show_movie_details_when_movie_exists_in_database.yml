@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/28?api_key=42b9e93e7af04e7c02a1a57d8de266e2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Sat, 06 Feb 2021 03:25:40 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - a7dc4aa7d854dacde5ce70dbc15af65ebe271d14
+      X-Memc-Age:
+      - '9394'
+      X-Memc-Expires:
+      - '12206'
+      Etag:
+      - W/"169d8c5446e46b66b5e65e34a641b5be"
+      Last-Modified:
+      - Sat, 06 Feb 2021 03:25:40 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 ed8294655bb258e13bfb027c25483ddb.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - vTnbu0ysJGJ0BA_IOohyQM8FLTyBLEycNAHXbtzCZ844XvPMhdvHdw==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvOVFzOW95bjRpRThRdFFqR1owSHAyV3lZTlhULmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0IjozMTUwMDAwMCwiZ2VucmVzIjpbeyJpZCI6MTgsIm5hbWUiOiJEcmFtYSJ9LHsiaWQiOjEwNzUyLCJuYW1lIjoiV2FyIn1dLCJob21lcGFnZSI6Imh0dHA6Ly93d3cuYXBvY2FseXBzZW5vdy5jb20iLCJpZCI6MjgsImltZGJfaWQiOiJ0dDAwNzg3ODgiLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJBcG9jYWx5cHNlIE5vdyIsIm92ZXJ2aWV3IjoiQXQgdGhlIGhlaWdodCBvZiB0aGUgVmlldG5hbSB3YXIsIENhcHRhaW4gQmVuamFtaW4gV2lsbGFyZCBpcyBzZW50IG9uIGEgZGFuZ2Vyb3VzIG1pc3Npb24gdGhhdCwgb2ZmaWNpYWxseSwgXCJkb2VzIG5vdCBleGlzdCwgbm9yIHdpbGwgaXQgZXZlciBleGlzdC5cIiBIaXMgZ29hbCBpcyB0byBsb2NhdGUgLSBhbmQgZWxpbWluYXRlIC0gYSBteXN0ZXJpb3VzIEdyZWVuIEJlcmV0IENvbG9uZWwgbmFtZWQgV2FsdGVyIEt1cnR6LCB3aG8gaGFzIGJlZW4gbGVhZGluZyBoaXMgcGVyc29uYWwgYXJteSBvbiBpbGxlZ2FsIGd1ZXJyaWxsYSBtaXNzaW9ucyBpbnRvIGVuZW15IHRlcnJpdG9yeS4iLCJwb3B1bGFyaXR5IjozMS4xMzksInBvc3Rlcl9wYXRoIjoiL2dRQjhZNVJDTWt2Mnp3ekZIYlVKWDNrQWh2QS5qcGciLCJwcm9kdWN0aW9uX2NvbXBhbmllcyI6W3siaWQiOjYwLCJsb2dvX3BhdGgiOiIvb0pYcEFzNEkzVzQ2ZTRka2FPRXpDYTR5QmtvLnBuZyIsIm5hbWUiOiJVbml0ZWQgQXJ0aXN0cyIsIm9yaWdpbl9jb3VudHJ5IjoiVVMifSx7ImlkIjo3MCwibG9nb19wYXRoIjoiL3VlYUVOUWtQY3k4cmxyNWZHWlZCWEtPaGxCaC5wbmciLCJuYW1lIjoiQW1lcmljYW4gWm9ldHJvcGUiLCJvcmlnaW5fY291bnRyeSI6IlVTIn1dLCJwcm9kdWN0aW9uX2NvdW50cmllcyI6W3siaXNvXzMxNjZfMSI6IlVTIiwibmFtZSI6IlVuaXRlZCBTdGF0ZXMgb2YgQW1lcmljYSJ9XSwicmVsZWFzZV9kYXRlIjoiMTk3OS0wOC0xNSIsInJldmVudWUiOjE1MDAwMDAwMCwicnVudGltZSI6MTQ3LCJzcG9rZW5fbGFuZ3VhZ2VzIjpbeyJlbmdsaXNoX25hbWUiOiJLaG1lciIsImlzb182MzlfMSI6ImttIiwibmFtZSI6IiJ9LHsiZW5nbGlzaF9uYW1lIjoiRW5nbGlzaCIsImlzb182MzlfMSI6ImVuIiwibmFtZSI6IkVuZ2xpc2gifSx7ImVuZ2xpc2hfbmFtZSI6IkZyZW5jaCIsImlzb182MzlfMSI6ImZyIiwibmFtZSI6IkZyYW7Dp2FpcyJ9LHsiZW5nbGlzaF9uYW1lIjoiVmlldG5hbWVzZSIsImlzb182MzlfMSI6InZpIiwibmFtZSI6IlRp4bq/bmcgVmnhu4d0In1dLCJzdGF0dXMiOiJSZWxlYXNlZCIsInRhZ2xpbmUiOiJUaGlzIGlzIHRoZSBlbmQuLi4iLCJ0aXRsZSI6IkFwb2NhbHlwc2UgTm93IiwidmlkZW8iOmZhbHNlLCJ2b3RlX2F2ZXJhZ2UiOjguMywidm90ZV9jb3VudCI6NTUzMX0=
+  recorded_at: Sat, 06 Feb 2021 03:25:40 GMT
+recorded_with: VCR 6.0.0

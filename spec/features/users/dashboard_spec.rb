@@ -10,8 +10,8 @@ RSpec.describe 'dashboard index' do
     @friend_3 = User.create!(email: 'friend3@email.com', password: 'password', is_registered?: true)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
-    @movie_1 = Movie.create!(title: 'Mulan', run_time: '1 hour 12 min', genre: 'Family')
-    @movie_2 = Movie.create!(title: 'Oceans 11', run_time: '2 hours 10 min', genre: 'Action')
+    @movie_1 = Movie.create!(title: 'Mulan', run_time: '1 hour 12 min')
+    @movie_2 = Movie.create!(title: 'Oceans 11', run_time: '2 hours 10 min')
     @party_1 = @movie_1.parties.create!(start_time: 'Sat, 16 Jan 2021 14:00:00 UTC +00:00',
                                         end_time: 'Sat, 16 Jan 2021 16:00:00 UTC +00:00')
     @party_2 = @movie_2.parties.create!(start_time: 'Fri, 15 Jan 2021 13:00:00 UTC +00:00',
@@ -31,7 +31,7 @@ RSpec.describe 'dashboard index' do
     expect(page).to have_button('Search for movies')
 
     click_button 'Search for movies'
-    expect(current_path).to eq(movies_path)
+    expect(current_path).to eq(discover_path)
   end
 
   it 'has a friends section that lists friends emails and adds friends' do
@@ -86,5 +86,4 @@ RSpec.describe 'dashboard index' do
       end
     end
   end
-
 end

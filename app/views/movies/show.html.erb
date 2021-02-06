@@ -1,0 +1,7 @@
+<h1><%= @movie[:title] %></h1>
+<ul>
+  <li>Summary: <%= @movie[:summary] %> </li>
+  <li>Run Time: <%= @movie[:run_time] %> minutes </li>
+  <li>Average Vote: <%= @movie[:average_vote] %> </li>
+  <li>Genres: <%= @movie[:genres].to_sentence %> </li>
+</ul>
