@@ -39,8 +39,8 @@ RSpec.describe User, type: :model do
       expect(@user.invited_parties).to eq([@party_2])
     end
 
-    it 'has_no_followers' do
-      expect(@user.has_no_followers?).to eq(true)
+    it 'has no followers' do
+      expect(@user.no_followers?).to eq(true)
     end
   end
 end
