@@ -7,26 +7,30 @@ RSpec.describe 'As an authenticated user', type: :feature do
       @user.authenticate(@user.password)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
-      @movie_1 = Movie.create!(title: 'Mulan', run_time: '1 hour 12 min')
+      @movie_1 = Movie.create!(id: '337401', title: 'Mulan', run_time: '1 hour 12 min')
       @movie_2 = Movie.create!(title: 'Oceans 11', run_time: '2 hours 10 min')
 
-      visit movie_path(@user, @movie_1)
+      visit movie_path(@movie_1.id)
     end
 
-    it 'should show movie details when movie exists in database' do
-      JSON_response = File.read('/spec/fixtures/movie_info_data.json')
-      stub_request(:get, "https://api.themoviedb.org/3/movie/#{@movie_1.id}?api_key=#{ENV['movie_api_key']}")
-        .to_return(status: 200, body: JSON_response)
-
-      # search NachoLibre
-      # make API call and get the info
-      # store temporarily somehow (hash/json)
-      # retrieve info
+    it 'should show movie details when movie exists in database', :vcr do
       expect(page).to have_content('Mulan')
+      expect(page).to have_content('When the Emperor of China issues a decree that one man per family must serve in the Imperial Chinese Army to defend the country from Huns, Hua Mulan, the eldest daughter of an honored warrior, steps in to take the place of her ailing father. She is spirited, determined and quick on her feet. Disguised as a man by the name of Hua Jun, she is tested every step of the way and must harness her innermost strength and embrace her true potential.')
+      expect(page).to have_content('115 minutes')
+      expect(page).to have_content('7.1')
+      expect(page).to have_content('Adventure and Fantasy')
+      expect(page).to have_content('Liu Yifei as Hua Mulan')
+      expect(page).to have_content('Ron Yuan as Sergeant Qiang')
+      expect(page).to have_content('msbreviews')
+      expect(page).to have_content('A more realistic take on the Chinese tale, one that')
+      expect(page).to have_content('Kamurai')
+      expect(page).to have_content('After those decisions, they also chose to reintroduce actual magic')
+      expect(page).to have_content('Total Reviews: 2')
     end
 
-    xit 'should have a button to create a viewing party' do
-      expect(page).to have_button('Create a Viewing Party')
+    it 'should have a button to create a viewing party', :vcr do
+      click_button 'Create a Viewing Party'
+      expect(current_path).to eq(new_user_party_path(@user))
     end
   end
 end

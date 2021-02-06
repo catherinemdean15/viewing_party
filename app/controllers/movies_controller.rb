@@ -26,13 +26,21 @@ class MoviesController < ApplicationController
   def show
     conn = Faraday.new('https://api.themoviedb.org')
     movie_info = conn.get("/3/movie/#{params[:id]}?api_key=#{ENV['movie_api_key']}")
-    movie_results = JSON.parse(movie_info.body, symbolize_names: true)
-    @movie = { title: movie_results[:original_title],
-               summary: movie_results[:overview],
-               average_vote: movie_results[:vote_average],
-               run_time: movie_results[:runtime],
-
-               genres: movie_results[:genres].map { |genre| genre[:name] } }
-    require 'pry'; binding.pry
+    movie_info_results = JSON.parse(movie_info.body, symbolize_names: true)
+    movie_cast = conn.get("/3/movie/#{params[:id]}/credits?api_key=#{ENV['movie_api_key']}")
+    movie_cast_results = JSON.parse(movie_cast.body, symbolize_names: true)
+    cast_names = movie_cast_results[:cast].take(10).map { |member| "#{member[:name]} as #{member[:character]}" }
+    movie_reviews = conn.get("/3/movie/#{params[:id]}/reviews?api_key=#{ENV['movie_api_key']}")
+    movie_review_results = JSON.parse(movie_reviews.body, symbolize_names: true)
+    review_results = movie_review_results[:results].map do |result|
+      { author: result[:author], content: result[:content] }
+    end
+    @movie = { title: movie_info_results[:original_title],
+               summary: movie_info_results[:overview],
+               average_vote: movie_info_results[:vote_average],
+               run_time: movie_info_results[:runtime],
+               genres: movie_info_results[:genres].map { |genre| genre[:name] },
+               cast: cast_names,
+               reviews: review_results }
   end
 end
