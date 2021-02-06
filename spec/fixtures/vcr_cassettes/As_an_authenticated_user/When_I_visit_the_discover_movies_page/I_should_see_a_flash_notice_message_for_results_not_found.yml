@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie?api_key=<MOVIE_API_KEY>&include_adult=true&page=1&query=jklih
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '57'
+      Connection:
+      - keep-alive
+      Date:
+      - Sat, 06 Feb 2021 22:51:07 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Etag:
+      - a8d277d2d95f2ea20f792a48c43093dc
+      Cache-Control:
+      - public, max-age=600
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 4bfb5bb8bc988f7af3321a7aa11bee76.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - IAH50-C4
+      X-Amz-Cf-Id:
+      - 4l6ldzBeMa4mlvVMd6caP5qY1jlKuwcRjrliM_GYaIE608inxMwk9g==
+    body:
+      encoding: UTF-8
+      string: '{"page":1,"results":[],"total_pages":0,"total_results":0}'
+  recorded_at: Sat, 06 Feb 2021 22:51:07 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie?api_key=<MOVIE_API_KEY>&include_adult=true&page=2&query=jklih
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '57'
+      Connection:
+      - keep-alive
+      Date:
+      - Sat, 06 Feb 2021 22:51:07 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Etag:
+      - daeb628883c68203dc276731d4722f32
+      Cache-Control:
+      - public, max-age=600
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 6d1b26f5d90c2b04965056164729d3bd.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - IAH50-C4
+      X-Amz-Cf-Id:
+      - 9ISAjZY47X3UBLnr6AqdHs-otVmuZo3A6-5K0jpcap8BIc8thtd0lQ==
+    body:
+      encoding: UTF-8
+      string: '{"page":2,"results":[],"total_pages":0,"total_results":0}'
+  recorded_at: Sat, 06 Feb 2021 22:51:07 GMT
+recorded_with: VCR 6.0.0
