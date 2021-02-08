@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users, only: %i[create destroy] do
     member { get 'dashboard' }
     resources :friends, only: [:create]
-    resources :parties, only: [:new]
+    resources :parties, only: %i[new create]
   end
 
   resources :sessions, only: [:create]
