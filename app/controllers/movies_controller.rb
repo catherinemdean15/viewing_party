@@ -35,7 +35,8 @@ class MoviesController < ApplicationController
     review_results = movie_review_results[:results].map do |result|
       { author: result[:author], content: result[:content] }
     end
-    @movie = { title: movie_info_results[:original_title],
+    @movie = { id: params[:id],
+               title: movie_info_results[:original_title],
                summary: movie_info_results[:overview],
                average_vote: movie_info_results[:vote_average],
                run_time: movie_info_results[:runtime],
