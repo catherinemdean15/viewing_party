@@ -17,7 +17,6 @@
       <%= f.submit 'Add Friend'%>
     <% end %>
 </section>
-
 <section id="viewing_parties" >
     <h2>Viewing Parties</h2>
       <section id='hosting'>
@@ -25,7 +24,8 @@
         <ul>
           <% current_user.hosted_parties.each do |party| %>
             <li><%= party.movie.title %></li>
-            <li><%= party.start_time.strftime('%B %d, %Y %l:%M %p')%> </li>
+            <li><%= party.date.strftime('%B %d, %Y')%></li>
+            <li><%= party.start_time.strftime('%l:%M %p')%> </li>
             <li><%= 'Hosting'%></li>
           <% end %>
         </ul>
@@ -35,7 +35,8 @@
         <ul>
           <% current_user.invited_parties.each do |party| %>
             <li><%= party.movie.title %></li>
-            <li><%= party.start_time.strftime('%B %d, %Y %l:%M %p')%> </li>
+            <li><%= party.date.strftime('%B %d, %Y') %></li>
+            <li><%= party.start_time.strftime('%l:%M %p')%> </li>
             <li><%= 'Invited'%></li>
           <% end %>
         </ul>
