@@ -12,11 +12,11 @@ class PartiesController < ApplicationController
     if @party.save
       flash[:notice] = 'You have made a new party!'
       redirect_to dashboard_user_path(current_user)
+      invite_guests
     else
       flash[:notice] = 'Please complete all forms'
       render :new
     end
-    invite_guests
   end
 
   def create_movie
