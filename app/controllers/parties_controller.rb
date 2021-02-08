@@ -7,6 +7,10 @@ class PartiesController < ApplicationController
 
   def create
     create_movie unless Movie.exists?(params[:party][:id])
+    create_party
+  end
+
+  def create_party
     @party = Party.new(party_params)
     @party.update(movie_id: params[:party][:id])
     if @party.save
