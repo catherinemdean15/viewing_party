@@ -39,5 +39,15 @@ RSpec.describe 'As an authenticated user', type: :feature do
       expect(page).to have_content('3:00 PM')
       expect(page).to have_content('Invited')
     end
+
+    it 'has a sad path when creating a new party', :vcr do
+      click_button 'Create a Viewing Party'
+
+      fill_in 'party[date]', with: '2021/03/12'
+
+      click_button 'Create new Party'
+
+      expect(page).to have_content('Please complete all forms')
+    end
   end
 end
