@@ -21,7 +21,11 @@
 
     <ul id="flash-messages" >
       <% flash.each do |notice, messages| %>
-        <li><%= messages %></li>
+        <% if messages.class == Array %>
+          <p><%= messages.to_sentence %></p>
+        <% else %>
+          <p><%= messages%></p>
+         <% end %>
       <% end %>
     </ul>
 
