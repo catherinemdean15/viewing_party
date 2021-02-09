@@ -1,0 +1,19 @@
+<h1>New party</h1>
+<h2><%= params[:party][:movie_title] %></h2>
+
+<%= form_with model: Party, method: :post, url: user_parties_path(current_user), local: true do |f| %>
+  <%= f.hidden_field :movie_id, value: "#{params[:party][:movie_id]}"%>
+  <%= f.hidden_field :movie_title, value: "#{params[:party][:movie_title]}"%>
+  <%= f.hidden_field :movie_run_time, value: "#{params[:party][:movie_run_time]}"%>
+  <%= f.label :date, 'Date:' %><br>
+  <%= f.date_field :date %><br><br>
+  <%= f.label :starts_time, 'Start Time:' %><br>
+  <%= f.time_field :start_time, :ignore_date => true %><br><br>
+  <%= f.label 'Duration of Party:' %><br>
+  <%= f.text_field :duration, value: "#{params[:party][:movie_run_time]}" %><br><br>
+  <% current_user.followings.each do |friend| %>
+    <%= f.label "Invite #{friend.email}"%>
+    <%= check_box(User, friend.id, options = {})%> <br/>
+  <% end %>
+  <%= f.submit 'Create new Party'%>
+<% end %>

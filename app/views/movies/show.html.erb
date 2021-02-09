@@ -1,18 +1,24 @@
-<h1><%= @movie[:title] %></h1>
-<%= button_to 'Create a Viewing Party', new_user_party_path(current_user), method: :get%>
+
+<h1><%= @movie.title %></h1>
+<%= form_with model: Party, method: :get, url: new_user_party_path(current_user), local: true do |f| %>
+  <%= f.hidden_field :movie_title, value: @movie.title %>
+  <%= f.hidden_field :movie_id, value: @movie.id %>
+  <%= f.hidden_field :movie_run_time, value: @movie.run_time %>
+  <%= f.submit 'Create a Viewing Party'%>
+<% end %>
 
 <ul>
-  <li>Summary: <%= @movie[:summary] %> </li>
-  <li>Run Time: <%= @movie[:run_time] %> minutes </li>
-  <li>Average Vote: <%= @movie[:average_vote] %> </li>
-  <li>Genres: <%= @movie[:genres].to_sentence %> </li>
+  <li>Summary:      <%= @movie.summary %> </li>
+  <li>Run Time:     <%= @movie.run_time %> minutes </li>
+  <li>Average Vote: <%= @movie.average_vote %> </li>
+  <li>Genres:       <%= @movie.genres.to_sentence %> </li>
 </ul>
-<b> Cast Members: <% @movie[:cast].each do |member|  %></b>
+<b> Cast Members: <% @movie.cast.each do |member|  %></b>
     <p><%= member %> </p>
   <% end %>
 <br>
-<p> Total Reviews: <%= @movie[:reviews].count %> </p>
-<b> Reviews: <% @movie[:reviews].each do |review| %> </b>
+<p> Total Reviews:  <%= @movie.reviews.count %> </p>
+<b> Reviews: <% @movie.reviews.each do |review| %> </b>
   <p><%= review[:author] %> </p>
   <p><%= review[:content] %> </p>
 <% end %>

@@ -12,10 +12,8 @@ RSpec.describe 'dashboard index' do
 
     @movie_1 = Movie.create!(title: 'Mulan', run_time: '1 hour 12 min')
     @movie_2 = Movie.create!(title: 'Oceans 11', run_time: '2 hours 10 min')
-    @party_1 = @movie_1.parties.create!(start_time: 'Sat, 16 Jan 2021 14:00:00 UTC +00:00',
-                                        end_time: 'Sat, 16 Jan 2021 16:00:00 UTC +00:00')
-    @party_2 = @movie_2.parties.create!(start_time: 'Fri, 15 Jan 2021 13:00:00 UTC +00:00',
-                                        end_time: 'Fri, 15 Jan 2021 16:00:00 UTC +00:00')
+    @party_1 = @movie_1.parties.create!(start_time: '3:00 PM', date: '20/12/12', duration: 112)
+    @party_2 = @movie_2.parties.create!(start_time: '5:00 PM', date: '12/12/12', duration: 156)
 
     PartiesUser.create!(party_id: @party_1.id, user_id: @user.id, host: true)
     PartiesUser.create!(party_id: @party_2.id, user_id: @user.id, host: false)
@@ -75,13 +73,13 @@ RSpec.describe 'dashboard index' do
       within('#hosting') do
         expect(page).to have_content(@movie_1.title)
         expect(page).to_not have_content(@movie_2.title)
-        expect(page).to have_content('January 16, 2021 2:00 PM')
+        expect(page).to have_content('December 12, 0020 3:00 PM')
         expect(page).to have_content('Hosting')
       end
       within('#invited') do
         expect(page).to have_content(@movie_2.title)
         expect(page).to_not have_content(@movie_1.title)
-        expect(page).to have_content('January 15, 2021 1:00 PM')
+        expect(page).to have_content('December 12, 0012 5:00 PM')
         expect(page).to have_content('Invited')
       end
     end

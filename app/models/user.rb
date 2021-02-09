@@ -11,11 +11,11 @@ class User < ApplicationRecord
   has_many :parties, through: :parties_users
 
   def invited_parties
-    parties.joins(:parties_users).where('parties_users.host = false')
+    parties.joins(:parties_users).where('parties_users.host = false').uniq
   end
 
   def hosted_parties
-    parties.joins(:parties_users).where('parties_users.host = true')
+    parties.joins(:parties_users).where('parties_users.host = true').uniq
   end
 
   def no_followers?

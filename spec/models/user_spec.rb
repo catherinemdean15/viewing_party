@@ -24,8 +24,8 @@ RSpec.describe User, type: :model do
 
       @movie_1 = Movie.create!(title: 'Mulan', run_time: '1 hour 12 min')
       @movie_2 = Movie.create!(title: 'Oceans 11', run_time: '2 hours 10 min')
-      @party_1 = @movie_1.parties.create!(start_time: 'beginning time', end_time: 'ending_time')
-      @party_2 = @movie_2.parties.create!(start_time: 'beginning time', end_time: 'ending_time')
+      @party_1 = @movie_1.parties.create!(start_time: '3:00 PM', date: '20/12/12', duration: 112)
+      @party_2 = @movie_2.parties.create!(start_time: '5:00 PM', date: '12/12/12', duration: 156)
 
       PartiesUser.create!(party_id: @party_1.id, user_id: @user.id, host: true)
       PartiesUser.create!(party_id: @party_2.id, user_id: @user.id, host: false)
