@@ -31,7 +31,7 @@ RSpec.describe "users new page" do
     
     fill_in "user[email]", with: user_email
     click_button 'Register'
-    save_and_open_page
+
     expect(page).to have_content("Password can't be blank")
   end
 end

@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   def index
     @movies = []
     if params[:search] == 'top_movies'
-      @movies = MovieFacade.get_top_forty
+      @movies = MovieFacade.find_top_forty
     elsif params[:commit] == 'Find Movie'
       @movies = MovieFacade.find_movies(params[:movie][:search])
     end
