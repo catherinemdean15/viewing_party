@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Sat, 06 Feb 2021 22:51:07 GMT
+      - Mon, 08 Feb 2021 22:21:06 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -42,15 +42,15 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 4bfb5bb8bc988f7af3321a7aa11bee76.cloudfront.net (CloudFront)
+      - 1.1 12435f922f48ee227c1e888952ed66ac.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - IAH50-C4
+      - LAX50-C2
       X-Amz-Cf-Id:
-      - 4l6ldzBeMa4mlvVMd6caP5qY1jlKuwcRjrliM_GYaIE608inxMwk9g==
+      - NB01r3XYatJhU6Dli5LZ6Kek1SDfDyeAvYtw_k7Igo-Y8tDMhTMBFQ==
     body:
       encoding: UTF-8
       string: '{"page":1,"results":[],"total_pages":0,"total_results":0}'
-  recorded_at: Sat, 06 Feb 2021 22:51:07 GMT
+  recorded_at: Mon, 08 Feb 2021 22:21:06 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/search/movie?api_key=<MOVIE_API_KEY>&include_adult=true&page=2&query=jklih
@@ -76,7 +76,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Sat, 06 Feb 2021 22:51:07 GMT
+      - Mon, 08 Feb 2021 22:21:06 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -93,13 +93,13 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 6d1b26f5d90c2b04965056164729d3bd.cloudfront.net (CloudFront)
+      - 1.1 be269f241b5cfb9cadc0ea3610022758.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - IAH50-C4
+      - LAX50-C2
       X-Amz-Cf-Id:
-      - 9ISAjZY47X3UBLnr6AqdHs-otVmuZo3A6-5K0jpcap8BIc8thtd0lQ==
+      - zl0junmPeXPOAjN7nVL5XVUYAayh26ERn3fcOc03H3HhlE4unEvMEQ==
     body:
       encoding: UTF-8
       string: '{"page":2,"results":[],"total_pages":0,"total_results":0}'
-  recorded_at: Sat, 06 Feb 2021 22:51:07 GMT
+  recorded_at: Mon, 08 Feb 2021 22:21:06 GMT
 recorded_with: VCR 6.0.0

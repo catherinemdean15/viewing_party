@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Sun, 07 Feb 2021 19:21:09 GMT
+      - Mon, 08 Feb 2021 22:21:04 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -42,34 +42,32 @@ http_interactions:
       X-Memc-Key:
       - d923698bb3f29f7e290d832a10b46e695d10cd24
       X-Memc-Age:
-      - '4492'
+      - '12882'
       X-Memc-Expires:
-      - '17108'
+      - '8718'
       Etag:
-      - W/"46024dc77a1a736c133b0363a2918615"
+      - W/"ee2660d3eb48670393f349b0ff1ed25d"
       Last-Modified:
-      - Sun, 07 Feb 2021 19:21:09 GMT
+      - Mon, 08 Feb 2021 22:21:04 GMT
       Vary:
       - Accept-Encoding
       X-Cache:
-      - Hit from cloudfront
+      - Miss from cloudfront
       Via:
-      - 1.1 8922c76dde274383aa69ec6605e6fb59.cloudfront.net (CloudFront)
+      - 1.1 30a008d85df71a65d24879648931496c.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - LAX50-C2
       X-Amz-Cf-Id:
-      - I0luTRxXMomSk93SobH0qCT5kBj9umoECIi4icIeEgqq7oJxQpgOEQ==
-      Age:
-      - '18'
+      - LgDESlQtB26m4EwZXnHgtFIoFahhhKqqIQ0VE79gvl3R5drDe1AJuQ==
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/nOmrM65jDfjJW5CAesBFWMrUWbU.jpg","belongs_to_collection":{"id":208602,"name":"That''s
         Entertainment Collection","poster_path":"/oL9M7tEllrdtJZlEnXMKEg2gdod.jpg","backdrop_path":null},"budget":0,"genres":[{"id":99,"name":"Documentary"},{"id":10751,"name":"Family"},{"id":10402,"name":"Music"}],"homepage":"","id":33740,"imdb_id":"tt0072272","original_language":"en","original_title":"That''s
         Entertainment!","overview":"Various MGM stars from yesterday present their
-        favorite musical moments from the studio''s 50 year history.","popularity":6.93,"poster_path":"/zDrBHhOF55FjbJLyYge3I4v1B8S.jpg","production_companies":[{"id":21,"logo_path":"/aOWKh4gkNrfFZ3Ep7n0ckPhoGb5.png","name":"Metro-Goldwyn-Mayer","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
+        favorite musical moments from the studio''s 50 year history.","popularity":9.702,"poster_path":"/zDrBHhOF55FjbJLyYge3I4v1B8S.jpg","production_companies":[{"id":21,"logo_path":"/aOWKh4gkNrfFZ3Ep7n0ckPhoGb5.png","name":"Metro-Goldwyn-Mayer","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
         States of America"}],"release_date":"1974-06-21","revenue":0,"runtime":135,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"More
         than a movie. It''s a celebration.","title":"That''s Entertainment!","video":false,"vote_average":7.3,"vote_count":37}'
-  recorded_at: Sun, 07 Feb 2021 19:21:27 GMT
+  recorded_at: Mon, 08 Feb 2021 22:21:04 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/33740/credits?api_key=<MOVIE_API_KEY>
@@ -95,7 +93,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Sun, 07 Feb 2021 19:21:09 GMT
+      - Mon, 08 Feb 2021 22:21:04 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -112,243 +110,241 @@ http_interactions:
       X-Memc-Key:
       - f4c0198a98f68e96c31d2d852d109bdee3dd4863
       X-Memc-Age:
-      - '18302'
+      - '3860'
       X-Memc-Expires:
-      - '3298'
+      - '17740'
       Etag:
-      - W/"3e861991a6ab1902ad6bff51f5d3d819"
+      - W/"880f32c389cba5fb4366113ad0ed9568"
       Last-Modified:
-      - Sun, 07 Feb 2021 19:21:09 GMT
+      - Mon, 08 Feb 2021 22:21:04 GMT
       Vary:
       - Accept-Encoding
       X-Cache:
-      - Hit from cloudfront
+      - Miss from cloudfront
       Via:
-      - 1.1 4d0d70ec0eabd0560d63af069388e374.cloudfront.net (CloudFront)
+      - 1.1 4eef074c708dc507931831218d0d5d48.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - LAX50-C2
       X-Amz-Cf-Id:
-      - te50gDNaYYXV-FDOQuIepsuVhfLZwzknuiVfSFGpHbnoKa8f-mqstw==
-      Age:
-      - '18'
+      - 8glYDramu-TbdjP5LDb86pVrWDxYns-zPX6RGSNd6lRsJ59xoq7Sqg==
     body:
       encoding: ASCII-8BIT
       string: '{"id":33740,"cast":[{"adult":false,"gender":2,"id":30181,"known_for_department":"Acting","name":"Fred
-        Astaire","original_name":"Fred Astaire","popularity":3.466,"profile_path":"/6gw9PCrKi19I5QOwjEPaOYW9uLI.jpg","cast_id":0,"character":"Himself
+        Astaire","original_name":"Fred Astaire","popularity":2.64,"profile_path":"/6gw9PCrKi19I5QOwjEPaOYW9uLI.jpg","cast_id":0,"character":"Himself
         - Host / Narrator","credit_id":"551a97b4c3a368252a0016d0","order":0},{"adult":false,"gender":2,"id":24937,"known_for_department":"Acting","name":"Bing
-        Crosby","original_name":"Bing Crosby","popularity":1.966,"profile_path":"/ydxPEeNPr0vaKZmEZXVNvhav3LB.jpg","cast_id":109,"character":"Himself
+        Crosby","original_name":"Bing Crosby","popularity":2.752,"profile_path":"/ydxPEeNPr0vaKZmEZXVNvhav3LB.jpg","cast_id":109,"character":"Himself
         - Host / Narrator","credit_id":"551ab5bfc3a368237c001dbf","order":1},{"adult":false,"gender":2,"id":13294,"known_for_department":"Acting","name":"Gene
-        Kelly","original_name":"Gene Kelly","popularity":1.279,"profile_path":"/qpxdcekD3x77J6dIxMOUfJifu49.jpg","cast_id":2,"character":"Himself
+        Kelly","original_name":"Gene Kelly","popularity":1.791,"profile_path":"/qpxdcekD3x77J6dIxMOUfJifu49.jpg","cast_id":2,"character":"Himself
         - Host / Narrator","credit_id":"551a97d9c3a36835bf001e51","order":3},{"adult":false,"gender":2,"id":4353,"known_for_department":"Acting","name":"Peter
-        Lawford","original_name":"Peter Lawford","popularity":1.796,"profile_path":"/lmD2YbX6NrqCHrMdrTTCkAh3Ry0.jpg","cast_id":3,"character":"Himself
+        Lawford","original_name":"Peter Lawford","popularity":2.139,"profile_path":"/lmD2YbX6NrqCHrMdrTTCkAh3Ry0.jpg","cast_id":3,"character":"Himself
         - Host / Narrator","credit_id":"551a97e392514164cd001842","order":4},{"adult":false,"gender":1,"id":66776,"known_for_department":"Acting","name":"Liza
-        Minnelli","original_name":"Liza Minnelli","popularity":1.307,"profile_path":"/fG7Xa97RT2p8AT4CYHMfMQuxXg6.jpg","cast_id":4,"character":"Herself
+        Minnelli","original_name":"Liza Minnelli","popularity":1.83,"profile_path":"/fG7Xa97RT2p8AT4CYHMfMQuxXg6.jpg","cast_id":4,"character":"Herself
         - Host / Narrator","credit_id":"551a97edc3a368252a0016df","order":5},{"adult":false,"gender":2,"id":13295,"known_for_department":"Acting","name":"Donald
-        O''Connor","original_name":"Donald O''Connor","popularity":1.428,"profile_path":"/pPB1oZgIBfZqRM0xMNtKD9g4LJP.jpg","cast_id":5,"character":"Himself
+        O''Connor","original_name":"Donald O''Connor","popularity":1.999,"profile_path":"/pPB1oZgIBfZqRM0xMNtKD9g4LJP.jpg","cast_id":5,"character":"Himself
         - Host / Narrator","credit_id":"551a97f7925141655d001640","order":6},{"adult":false,"gender":1,"id":8857,"known_for_department":"Acting","name":"Debbie
-        Reynolds","original_name":"Debbie Reynolds","popularity":1.492,"profile_path":"/2jG8pk5fr9ZgCQOH1cLVDWbbwBK.jpg","cast_id":6,"character":"Herself
+        Reynolds","original_name":"Debbie Reynolds","popularity":1.648,"profile_path":"/2jG8pk5fr9ZgCQOH1cLVDWbbwBK.jpg","cast_id":6,"character":"Herself
         - Host / Narrator","credit_id":"551a9803c3a368252a0016e4","order":7},{"adult":false,"gender":2,"id":1937,"known_for_department":"Acting","name":"Mickey
-        Rooney","original_name":"Mickey Rooney","popularity":4.742,"profile_path":"/eYuayEC3xhXQf3Z1Cy6AVMEcgZb.jpg","cast_id":7,"character":"Himself
+        Rooney","original_name":"Mickey Rooney","popularity":3.023,"profile_path":"/eYuayEC3xhXQf3Z1Cy6AVMEcgZb.jpg","cast_id":7,"character":"Himself
         - Host / Narrator","credit_id":"551a980e925141658e001712","order":8},{"adult":false,"gender":2,"id":4347,"known_for_department":"Acting","name":"Frank
-        Sinatra","original_name":"Frank Sinatra","popularity":4.441,"profile_path":"/w9Wl6FznONDn5O880ScJo79AOMU.jpg","cast_id":8,"character":"Himself
+        Sinatra","original_name":"Frank Sinatra","popularity":3.332,"profile_path":"/w9Wl6FznONDn5O880ScJo79AOMU.jpg","cast_id":8,"character":"Himself
         - Host / Narrator","credit_id":"551a98179251415c3a0016cd","order":9},{"adult":false,"gender":2,"id":854,"known_for_department":"Acting","name":"James
-        Stewart","original_name":"James Stewart","popularity":6.862,"profile_path":"/9tJLNF0JjR4S50HdFGqUC1toRrx.jpg","cast_id":9,"character":"Himself
+        Stewart","original_name":"James Stewart","popularity":7.659,"profile_path":"/9tJLNF0JjR4S50HdFGqUC1toRrx.jpg","cast_id":9,"character":"Himself
         - Host / Narrator","credit_id":"551a982392514164cd00184e","order":10},{"adult":false,"gender":1,"id":3635,"known_for_department":"Acting","name":"Elizabeth
-        Taylor","original_name":"Elizabeth Taylor","popularity":4.226,"profile_path":"/1GXYcfIxJdLhrfM312daOEcfwUb.jpg","cast_id":10,"character":"Herself
+        Taylor","original_name":"Elizabeth Taylor","popularity":5.916,"profile_path":"/1GXYcfIxJdLhrfM312daOEcfwUb.jpg","cast_id":10,"character":"Herself
         - Host / Narrator","credit_id":"551a982c925141658e001717","order":11},{"adult":false,"gender":1,"id":41216,"known_for_department":"Acting","name":"June
-        Allyson","original_name":"June Allyson","popularity":1.4,"profile_path":"/bFCKWpdza7kAQ1KunwlzQz6p8F8.jpg","cast_id":11,"character":"(archive
+        Allyson","original_name":"June Allyson","popularity":1.96,"profile_path":"/bFCKWpdza7kAQ1KunwlzQz6p8F8.jpg","cast_id":11,"character":"(archive
         footage)","credit_id":"551a983592514109320013a5","order":12},{"adult":false,"gender":1,"id":1093717,"known_for_department":"Acting","name":"Kay
         Armen","original_name":"Kay Armen","popularity":0.6,"profile_path":null,"cast_id":12,"character":"(archive
         footage)","credit_id":"551a983e9251415c97001606","order":13},{"adult":false,"gender":2,"id":9068,"known_for_department":"Acting","name":"Ray
-        Bolger","original_name":"Ray Bolger","popularity":1.943,"profile_path":"/43GZ1i6m905Q0r0qe99lgUUPX5O.jpg","cast_id":13,"character":"(archive
+        Bolger","original_name":"Ray Bolger","popularity":1.383,"profile_path":"/43GZ1i6m905Q0r0qe99lgUUPX5O.jpg","cast_id":13,"character":"(archive
         footage)","credit_id":"551a9846c3a3681bb500171f","order":14},{"adult":false,"gender":1,"id":95314,"known_for_department":"Acting","name":"Virginia
-        Bruce","original_name":"Virginia Bruce","popularity":1.016,"profile_path":"/5FqhPRPp0Nu8sAS5FpnuaDOE82n.jpg","cast_id":14,"character":"(archive
+        Bruce","original_name":"Virginia Bruce","popularity":1.422,"profile_path":"/5FqhPRPp0Nu8sAS5FpnuaDOE82n.jpg","cast_id":14,"character":"(archive
         footage)","credit_id":"551a984f92514164cd001856","order":15},{"adult":false,"gender":2,"id":589000,"known_for_department":"Acting","name":"Jack
-        Buchanan","original_name":"Jack Buchanan","popularity":1.02,"profile_path":"/8Cbs3jwdoN18Jdc4r5HdOuEFUf.jpg","cast_id":15,"character":"(archive
+        Buchanan","original_name":"Jack Buchanan","popularity":0.706,"profile_path":"/8Cbs3jwdoN18Jdc4r5HdOuEFUf.jpg","cast_id":15,"character":"(archive
         footage)","credit_id":"551a9859925141655d001658","order":16},{"adult":false,"gender":1,"id":5320,"known_for_department":"Acting","name":"Leslie
-        Caron","original_name":"Leslie Caron","popularity":3.128,"profile_path":"/1rIAOgyZEbJ0VQWDZG5HgwOD0Ju.jpg","cast_id":16,"character":"(archive
+        Caron","original_name":"Leslie Caron","popularity":2.538,"profile_path":"/1rIAOgyZEbJ0VQWDZG5HgwOD0Ju.jpg","cast_id":16,"character":"(archive
         footage)","credit_id":"551a9863c3a36835c80020b5","order":17},{"adult":false,"gender":2,"id":130585,"known_for_department":"Acting","name":"Carleton
-        Carpenter","original_name":"Carleton Carpenter","popularity":0.98,"profile_path":"/i0cYSzyUEKblOeCjrph7XSgIhIq.jpg","cast_id":17,"character":"(archive
+        Carpenter","original_name":"Carleton Carpenter","popularity":1.4,"profile_path":"/i0cYSzyUEKblOeCjrph7XSgIhIq.jpg","cast_id":17,"character":"(archive
         footage)","credit_id":"551a986cc3a368237c0018b3","order":18},{"adult":false,"gender":1,"id":41226,"known_for_department":"Acting","name":"Cyd
-        Charisse","original_name":"Cyd Charisse","popularity":3.163,"profile_path":"/xD5qN7oF5VJeCmgf2Ms3mTcfrAO.jpg","cast_id":18,"character":"(archive
+        Charisse","original_name":"Cyd Charisse","popularity":3.349,"profile_path":"/xD5qN7oF5VJeCmgf2Ms3mTcfrAO.jpg","cast_id":18,"character":"(archive
         footage)","credit_id":"551a9876c3a36823dc0017a4","order":19},{"adult":false,"gender":2,"id":112972,"known_for_department":"Acting","name":"Maurice
-        Chevalier","original_name":"Maurice Chevalier","popularity":1.83,"profile_path":"/zABRw3iRFqqKV0xB3Z3VcsJDfad.jpg","cast_id":19,"character":"(archive
+        Chevalier","original_name":"Maurice Chevalier","popularity":1.349,"profile_path":"/zABRw3iRFqqKV0xB3Z3VcsJDfad.jpg","cast_id":19,"character":"(archive
         footage)","credit_id":"551a987ec3a36835c80020bf","order":20},{"adult":false,"gender":1,"id":31550,"known_for_department":"Acting","name":"Joan
-        Crawford","original_name":"Joan Crawford","popularity":1.939,"profile_path":"/AtEGacmejG86ug8tKTxFd7JbJJO.jpg","cast_id":20,"character":"(archive
+        Crawford","original_name":"Joan Crawford","popularity":1.163,"profile_path":"/AtEGacmejG86ug8tKTxFd7JbJJO.jpg","cast_id":20,"character":"(archive
         footage)","credit_id":"551a9889c3a3681bb500172b","order":21},{"adult":false,"gender":1,"id":131001,"known_for_department":"Acting","name":"Virginia
-        Dale","original_name":"Virginia Dale","popularity":1.095,"profile_path":"/4AGWHKbVrTEd95i3vhsPZfNlHhY.jpg","cast_id":21,"character":"(archive
+        Dale","original_name":"Virginia Dale","popularity":1.529,"profile_path":"/4AGWHKbVrTEd95i3vhsPZfNlHhY.jpg","cast_id":21,"character":"(archive
         footage)","credit_id":"551a98919251415c3a0016eb","order":22},{"adult":false,"gender":2,"id":39603,"known_for_department":"Acting","name":"Vic
-        Damone","original_name":"Vic Damone","popularity":1.943,"profile_path":"/qutr19WqOvAR18NLxFycQlxCHoH.jpg","cast_id":22,"character":"(archive
+        Damone","original_name":"Vic Damone","popularity":1.383,"profile_path":"/qutr19WqOvAR18NLxFycQlxCHoH.jpg","cast_id":22,"character":"(archive
         footage)","credit_id":"551a9899c3a36824f800160a","order":23},{"adult":false,"gender":2,"id":34745,"known_for_department":"Acting","name":"Jimmy
-        Durante","original_name":"Jimmy Durante","popularity":1.661,"profile_path":"/lYZ7X60QrRe6CxmWaJJAisHz7p3.jpg","cast_id":23,"character":"(archive
+        Durante","original_name":"Jimmy Durante","popularity":1.298,"profile_path":"/lYZ7X60QrRe6CxmWaJJAisHz7p3.jpg","cast_id":23,"character":"(archive
         footage)","credit_id":"551a98b1925141658e001738","order":24},{"adult":false,"gender":1,"id":95622,"known_for_department":"Acting","name":"Deanna
-        Durbin","original_name":"Deanna Durbin","popularity":0.652,"profile_path":"/3st2RhFOtWUtLpxAdVlx1O3u6ff.jpg","cast_id":24,"character":"(archive
+        Durbin","original_name":"Deanna Durbin","popularity":0.996,"profile_path":"/3st2RhFOtWUtLpxAdVlx1O3u6ff.jpg","cast_id":24,"character":"(archive
         footage)","credit_id":"551a98bcc3a368252a001709","order":25},{"adult":false,"gender":2,"id":1935,"known_for_department":"Acting","name":"Buddy
-        Ebsen","original_name":"Buddy Ebsen","popularity":3.233,"profile_path":"/xBscNtDuEAUld96AlFEUPKM8TG9.jpg","cast_id":25,"character":"(archive
+        Ebsen","original_name":"Buddy Ebsen","popularity":3.37,"profile_path":"/xBscNtDuEAUld96AlFEUPKM8TG9.jpg","cast_id":25,"character":"(archive
         footage)","credit_id":"551a98c5c3a36835c10021e4","order":26},{"adult":false,"gender":2,"id":78847,"known_for_department":"Acting","name":"Nelson
-        Eddy","original_name":"Nelson Eddy","popularity":1.224,"profile_path":"/vhY2XZrKHZCwLGWRq2RqCcax23.jpg","cast_id":26,"character":"(archive
+        Eddy","original_name":"Nelson Eddy","popularity":1.167,"profile_path":"/vhY2XZrKHZCwLGWRq2RqCcax23.jpg","cast_id":26,"character":"(archive
         footage)","credit_id":"551a98ce925141658e00173e","order":27},{"adult":false,"gender":2,"id":30236,"known_for_department":"Acting","name":"Cliff
-        Edwards","original_name":"Cliff Edwards","popularity":1.886,"profile_path":"/kvXbe1rt4nRkxGYkLeVZldUDEaI.jpg","cast_id":27,"character":"(archive
+        Edwards","original_name":"Cliff Edwards","popularity":1.132,"profile_path":"/kvXbe1rt4nRkxGYkLeVZldUDEaI.jpg","cast_id":27,"character":"(archive
         footage)","credit_id":"551a98d6c3a36823dc0017c0","order":28},{"adult":false,"gender":2,"id":11492,"known_for_department":"Acting","name":"Clark
-        Gable","original_name":"Clark Gable","popularity":3.882,"profile_path":"/qD6WJzydym7n7fCeL9PGnHe1aEV.jpg","cast_id":28,"character":"(archive
+        Gable","original_name":"Clark Gable","popularity":3.565,"profile_path":"/qD6WJzydym7n7fCeL9PGnHe1aEV.jpg","cast_id":28,"character":"(archive
         footage)","credit_id":"551a98dec3a36823dc0017c5","order":29},{"adult":false,"gender":1,"id":25787,"known_for_department":"Acting","name":"Ava
-        Gardner","original_name":"Ava Gardner","popularity":3.376,"profile_path":"/4wpCcL2zFgP0K5bhY79Dl7zO60K.jpg","cast_id":29,"character":"(archive
+        Gardner","original_name":"Ava Gardner","popularity":2.613,"profile_path":"/4wpCcL2zFgP0K5bhY79Dl7zO60K.jpg","cast_id":29,"character":"(archive
         footage)","credit_id":"551a98e7c3a36835c10021ef","order":30},{"adult":false,"gender":1,"id":9066,"known_for_department":"Acting","name":"Judy
-        Garland","original_name":"Judy Garland","popularity":5.482,"profile_path":"/dkhMrLSfnqS3fmxWuXaEMwxN0Tf.jpg","cast_id":30,"character":"(archive
+        Garland","original_name":"Judy Garland","popularity":5.645,"profile_path":"/dkhMrLSfnqS3fmxWuXaEMwxN0Tf.jpg","cast_id":30,"character":"(archive
         footage)","credit_id":"551a98efc3a36835c80020db","order":31},{"adult":false,"gender":2,"id":2638,"known_for_department":"Acting","name":"Cary
-        Grant","original_name":"Cary Grant","popularity":5.017,"profile_path":"/moeJxPpEIF0abbjXYDPknDKLn44.jpg","cast_id":31,"character":"(archive
+        Grant","original_name":"Cary Grant","popularity":5.505,"profile_path":"/moeJxPpEIF0abbjXYDPknDKLn44.jpg","cast_id":31,"character":"(archive
         footage)","credit_id":"551a98f79251415c3a001708","order":32},{"adult":false,"gender":1,"id":82407,"known_for_department":"Acting","name":"Kathryn
-        Grayson","original_name":"Kathryn Grayson","popularity":3.02,"profile_path":"/ezysNRuMuiHSovFEFzkVNGZ7SoI.jpg","cast_id":32,"character":"(archive
+        Grayson","original_name":"Kathryn Grayson","popularity":1.812,"profile_path":"/ezysNRuMuiHSovFEFzkVNGZ7SoI.jpg","cast_id":32,"character":"(archive
         footage)","credit_id":"551a990092514109320013d2","order":33},{"adult":false,"gender":1,"id":19967,"known_for_department":"Acting","name":"Virginia
-        Grey","original_name":"Virginia Grey","popularity":2.258,"profile_path":"/ftyCI3XPJoGS75m3DFXOgOpw58z.jpg","cast_id":33,"character":"(archive
+        Grey","original_name":"Virginia Grey","popularity":3.161,"profile_path":"/ftyCI3XPJoGS75m3DFXOgOpw58z.jpg","cast_id":33,"character":"(archive
         footage)","credit_id":"551a9908c3a36824f8001624","order":34},{"adult":false,"gender":2,"id":9070,"known_for_department":"Acting","name":"Jack
-        Haley","original_name":"Jack Haley","popularity":1.388,"profile_path":"/9KSDR9ABg1pPLN8ZJMF3HxemlNH.jpg","cast_id":34,"character":"(archive
+        Haley","original_name":"Jack Haley","popularity":1.616,"profile_path":"/9KSDR9ABg1pPLN8ZJMF3HxemlNH.jpg","cast_id":34,"character":"(archive
         footage)","credit_id":"551a9917c3a36835c10021f8","order":35},{"adult":false,"gender":1,"id":82315,"known_for_department":"Acting","name":"Jean
-        Harlow","original_name":"Jean Harlow","popularity":1.686,"profile_path":"/bZGHQeMeD6oXqi3373IPYrSB761.jpg","cast_id":35,"character":"(archive
+        Harlow","original_name":"Jean Harlow","popularity":1.706,"profile_path":"/bZGHQeMeD6oXqi3373IPYrSB761.jpg","cast_id":35,"character":"(archive
         footage)","credit_id":"551a9922925141655d00167b","order":36},{"adult":false,"gender":1,"id":111401,"known_for_department":"Acting","name":"Bernadene
-        Hayes","original_name":"Bernadene Hayes","popularity":1.4,"profile_path":"/6k2Rc5hZUhzvweWnPeXldn7xpAD.jpg","cast_id":36,"character":"(archive
+        Hayes","original_name":"Bernadene Hayes","popularity":1.22,"profile_path":"/6k2Rc5hZUhzvweWnPeXldn7xpAD.jpg","cast_id":36,"character":"(archive
         footage)","credit_id":"551a992ac3a36824f800162d","order":37},{"adult":false,"gender":1,"id":92900,"known_for_department":"Acting","name":"Lena
-        Horne","original_name":"Lena Horne","popularity":0.971,"profile_path":"/mDTgjiRVc0nPALapCSDrlEVvutY.jpg","cast_id":37,"character":"(archive
+        Horne","original_name":"Lena Horne","popularity":0.6,"profile_path":"/mDTgjiRVc0nPALapCSDrlEVvutY.jpg","cast_id":37,"character":"(archive
         footage)","credit_id":"551a9934c3a36835c10021fd","order":38},{"adult":false,"gender":0,"id":1281690,"known_for_department":"Acting","name":"Lottice
-        Howell","original_name":"Lottice Howell","popularity":0.6,"profile_path":null,"cast_id":38,"character":"(archive
+        Howell","original_name":"Lottice Howell","popularity":0.98,"profile_path":null,"cast_id":38,"character":"(archive
         footage)","credit_id":"551a993dc3a36835c80020ef","order":39},{"adult":false,"gender":2,"id":37446,"known_for_department":"Acting","name":"Van
-        Johnson","original_name":"Van Johnson","popularity":2.268,"profile_path":"/A6vw5kbdmyXDz1ddQOocJmg9TSc.jpg","cast_id":39,"character":"(archive
+        Johnson","original_name":"Van Johnson","popularity":3.08,"profile_path":"/A6vw5kbdmyXDz1ddQOocJmg9TSc.jpg","cast_id":39,"character":"(archive
         footage)","credit_id":"551a9945c3a368237c0018eb","order":40},{"adult":false,"gender":2,"id":10802,"known_for_department":"Acting","name":"Allan
-        Jones","original_name":"Allan Jones","popularity":0.652,"profile_path":"/fv8zKH32hmpxRBjDsZNHpjGXIkb.jpg","cast_id":40,"character":"(archive
+        Jones","original_name":"Allan Jones","popularity":0.6,"profile_path":"/fv8zKH32hmpxRBjDsZNHpjGXIkb.jpg","cast_id":40,"character":"(archive
         footage)","credit_id":"551a994fc3a36835c80020f4","order":41},{"adult":false,"gender":2,"id":10508,"known_for_department":"Acting","name":"Louis
-        Jourdan","original_name":"Louis Jourdan","popularity":2.559,"profile_path":"/xCrLoRd1MR0puY386BRnPWAWTQ6.jpg","cast_id":41,"character":"(archive
+        Jourdan","original_name":"Louis Jourdan","popularity":1.968,"profile_path":"/xCrLoRd1MR0puY386BRnPWAWTQ6.jpg","cast_id":41,"character":"(archive
         footage)","credit_id":"551a995892514109320013e1","order":42},{"adult":false,"gender":2,"id":39601,"known_for_department":"Acting","name":"Howard
-        Keel","original_name":"Howard Keel","popularity":1.921,"profile_path":"/8pvdM0sFqs4Jq6Foh72UYhXXSh1.jpg","cast_id":42,"character":"(archive
+        Keel","original_name":"Howard Keel","popularity":1.776,"profile_path":"/8pvdM0sFqs4Jq6Foh72UYhXXSh1.jpg","cast_id":42,"character":"(archive
         footage)","credit_id":"551a9960925141658e001762","order":43},{"adult":false,"gender":2,"id":117675,"known_for_department":"Acting","name":"Charles
-        King","original_name":"Charles King","popularity":0.73,"profile_path":"/1K3oq1VI6wEcv2lxI2BpoNFu6bW.jpg","cast_id":43,"character":"(archive
+        King","original_name":"Charles King","popularity":1.019,"profile_path":"/1K3oq1VI6wEcv2lxI2BpoNFu6bW.jpg","cast_id":43,"character":"(archive
         footage)","credit_id":"551a996c92514165f80017a0","order":44},{"adult":false,"gender":0,"id":1188146,"known_for_department":"Acting","name":"Lorraine
         Krueger","original_name":"Lorraine Krueger","popularity":0.6,"profile_path":"/7AwRFiw4qEWsv3ll6YFqXcZ6Nb6.jpg","cast_id":44,"character":"(archive
         footage)","credit_id":"551a99799251415c3a00171e","order":45},{"adult":false,"gender":2,"id":9069,"known_for_department":"Acting","name":"Bert
-        Lahr","original_name":"Bert Lahr","popularity":1.891,"profile_path":"/3yAOM7NNlxxbIAErFgoPEBJEB9T.jpg","cast_id":45,"character":"(archive
+        Lahr","original_name":"Bert Lahr","popularity":1.367,"profile_path":"/3yAOM7NNlxxbIAErFgoPEBJEB9T.jpg","cast_id":45,"character":"(archive
         footage)","credit_id":"551a9984c3a36835c100220b","order":46},{"adult":false,"gender":2,"id":232024,"known_for_department":"Acting","name":"Mario
-        Lanza","original_name":"Mario Lanza","popularity":0.84,"profile_path":"/xWUZIgWJTK7hP58iWQoHPp9y9MT.jpg","cast_id":46,"character":"(archive
+        Lanza","original_name":"Mario Lanza","popularity":0.652,"profile_path":"/xWUZIgWJTK7hP58iWQoHPp9y9MT.jpg","cast_id":46,"character":"(archive
         footage)","credit_id":"551a998c92514109320013ee","order":47},{"adult":false,"gender":1,"id":98462,"known_for_department":"Acting","name":"Jeanette
-        MacDonald","original_name":"Jeanette MacDonald","popularity":1.735,"profile_path":"/qXCO42alRUe4zu4SoyQfMWA3KbU.jpg","cast_id":47,"character":"(archive
+        MacDonald","original_name":"Jeanette MacDonald","popularity":2.121,"profile_path":"/qXCO42alRUe4zu4SoyQfMWA3KbU.jpg","cast_id":47,"character":"(archive
         footage)","credit_id":"551a9997c3a36835c8002104","order":48},{"adult":false,"gender":1,"id":120542,"known_for_department":"Acting","name":"Joan
-        Marsh","original_name":"Joan Marsh","popularity":1.395,"profile_path":"/3VWcmRuVvcW6dz0mX1Q1Hoc8Dlc.jpg","cast_id":48,"character":"(archive
+        Marsh","original_name":"Joan Marsh","popularity":0.837,"profile_path":"/3VWcmRuVvcW6dz0mX1Q1Hoc8Dlc.jpg","cast_id":48,"character":"(archive
         footage)","credit_id":"551a99a1c3a368237c0018f8","order":49},{"adult":false,"gender":2,"id":94803,"known_for_department":"Acting","name":"Tony
-        Martin","original_name":"Tony Martin","popularity":1.62,"profile_path":"/qKsFTry1dp8So4EZagXBT58Rkx7.jpg","cast_id":49,"character":"(archive
+        Martin","original_name":"Tony Martin","popularity":1.286,"profile_path":"/qKsFTry1dp8So4EZagXBT58Rkx7.jpg","cast_id":49,"character":"(archive
         footage)","credit_id":"551a99b0c3a368237c0018fe","order":50},{"adult":false,"gender":0,"id":1035801,"known_for_department":"Acting","name":"Douglas
-        McPhail","original_name":"Douglas McPhail","popularity":0.6,"profile_path":null,"cast_id":50,"character":"(archive
+        McPhail","original_name":"Douglas McPhail","popularity":0.98,"profile_path":null,"cast_id":50,"character":"(archive
         footage)","credit_id":"551a99b9c3a368237c001902","order":51},{"adult":false,"gender":1,"id":15008,"known_for_department":"Acting","name":"Ann
-        Miller","original_name":"Ann Miller","popularity":1.289,"profile_path":"/3IWXjk5Qc4RYBdPEQdQsyo20ymh.jpg","cast_id":51,"character":"(archive
+        Miller","original_name":"Ann Miller","popularity":0.773,"profile_path":"/3IWXjk5Qc4RYBdPEQdQsyo20ymh.jpg","cast_id":51,"character":"(archive
         footage)","credit_id":"551a99ca925141658e001780","order":52},{"adult":false,"gender":2,"id":19406,"known_for_department":"Acting","name":"Robert
-        Montgomery","original_name":"Robert Montgomery","popularity":0.88,"profile_path":"/o2H1yxVxbxlTWP1PZDFXv6oxiFj.jpg","cast_id":52,"character":"(archive
+        Montgomery","original_name":"Robert Montgomery","popularity":1.4,"profile_path":"/o2H1yxVxbxlTWP1PZDFXv6oxiFj.jpg","cast_id":52,"character":"(archive
         footage)","credit_id":"551a99ebc3a36823dc0017fe","order":53},{"adult":false,"gender":1,"id":32436,"known_for_department":"Acting","name":"Natalie
-        Moorhead","original_name":"Natalie Moorhead","popularity":1.03,"profile_path":"/kEaOD3QKuU12xRJ3o4PmgRfqACo.jpg","cast_id":53,"character":"(archive
+        Moorhead","original_name":"Natalie Moorhead","popularity":1.442,"profile_path":"/kEaOD3QKuU12xRJ3o4PmgRfqACo.jpg","cast_id":53,"character":"(archive
         footage)","credit_id":"551a99f5c3a36835c1002225","order":54},{"adult":false,"gender":2,"id":33022,"known_for_department":"Acting","name":"Dennis
-        Morgan","original_name":"Dennis Morgan","popularity":1.846,"profile_path":"/lRNp0iYnLhP8A12ZYvTLeOxCwFt.jpg","cast_id":54,"character":"(archive
+        Morgan","original_name":"Dennis Morgan","popularity":2.584,"profile_path":"/lRNp0iYnLhP8A12ZYvTLeOxCwFt.jpg","cast_id":54,"character":"(archive
         footage)","credit_id":"551a9b28c3a368252a001787","order":55},{"adult":false,"gender":2,"id":103704,"known_for_department":"Directing","name":"Jules
-        Munshin","original_name":"Jules Munshin","popularity":3.315,"profile_path":"/4ESljdSnyTs9HGt65UtOM6DZWB4.jpg","cast_id":55,"character":"(archive
+        Munshin","original_name":"Jules Munshin","popularity":3.795,"profile_path":"/4ESljdSnyTs9HGt65UtOM6DZWB4.jpg","cast_id":55,"character":"(archive
         footage)","credit_id":"551a9b3192514165f80017fa","order":56},{"adult":false,"gender":2,"id":1005050,"known_for_department":"Acting","name":"Fayard
-        Nicholas","original_name":"Fayard Nicholas","popularity":1.008,"profile_path":"/cJKmEc7jujjI19NP84UhUAP9ERV.jpg","cast_id":56,"character":"(archive
+        Nicholas","original_name":"Fayard Nicholas","popularity":0.702,"profile_path":"/cJKmEc7jujjI19NP84UhUAP9ERV.jpg","cast_id":56,"character":"(archive
         footage)","credit_id":"551a9b3ac3a36824f8001699","order":57},{"adult":false,"gender":2,"id":103934,"known_for_department":"Acting","name":"Harold
-        Nicholas","original_name":"Harold Nicholas","popularity":1.284,"profile_path":"/xXQbLSHSV1Zn8S5y0BMHArCHYKC.jpg","cast_id":57,"character":"(archive
+        Nicholas","original_name":"Harold Nicholas","popularity":1.185,"profile_path":"/xXQbLSHSV1Zn8S5y0BMHArCHYKC.jpg","cast_id":57,"character":"(archive
         footage)","credit_id":"551a9b42c3a36835c8002167","order":58},{"adult":false,"gender":1,"id":13991,"known_for_department":"Acting","name":"Margaret
-        O''Brien","original_name":"Margaret O''Brien","popularity":4.21,"profile_path":"/iLzh8P6N7qKWpVltgBOB7ItBfCu.jpg","cast_id":58,"character":"(archive
+        O''Brien","original_name":"Margaret O''Brien","popularity":2.863,"profile_path":"/iLzh8P6N7qKWpVltgBOB7ItBfCu.jpg","cast_id":58,"character":"(archive
         footage)","credit_id":"551a9b4f925141093200144f","order":59},{"adult":false,"gender":1,"id":237562,"known_for_department":"Acting","name":"Eleanor
-        Powell","original_name":"Eleanor Powell","popularity":2.886,"profile_path":"/9BCrvxIkA9Jy3nu0xEanjEy3CSj.jpg","cast_id":59,"character":"(archive
+        Powell","original_name":"Eleanor Powell","popularity":2.066,"profile_path":"/9BCrvxIkA9Jy3nu0xEanjEy3CSj.jpg","cast_id":59,"character":"(archive
         footage)","credit_id":"551a9b6a92514164cd001900","order":60},{"adult":false,"gender":1,"id":82405,"known_for_department":"Acting","name":"Jane
-        Powell","original_name":"Jane Powell","popularity":2.194,"profile_path":"/zU4GkEqdn8Qlv14V7rrx3clNjnF.jpg","cast_id":60,"character":"(archive
+        Powell","original_name":"Jane Powell","popularity":3.058,"profile_path":"/zU4GkEqdn8Qlv14V7rrx3clNjnF.jpg","cast_id":60,"character":"(archive
         footage)","credit_id":"551a9b79925141658e0017ec","order":61},{"adult":false,"gender":1,"id":30003,"known_for_department":"Acting","name":"Ginger
-        Rogers","original_name":"Ginger Rogers","popularity":3.299,"profile_path":"/ah4nyaNUOMZwmGbDOAtN8S8J6ap.jpg","cast_id":61,"character":"(archive
+        Rogers","original_name":"Ginger Rogers","popularity":1.979,"profile_path":"/ah4nyaNUOMZwmGbDOAtN8S8J6ap.jpg","cast_id":61,"character":"(archive
         footage)","credit_id":"551a9b81c3a36824f80016b5","order":62},{"adult":false,"gender":0,"id":144403,"known_for_department":"Acting","name":"Paula
-        Stone","original_name":"Paula Stone","popularity":1.38,"profile_path":"/lslmhXPoWHOMDABM0oCiD5qrj8K.jpg","cast_id":62,"character":"(archive
+        Stone","original_name":"Paula Stone","popularity":1.614,"profile_path":"/lslmhXPoWHOMDABM0oCiD5qrj8K.jpg","cast_id":62,"character":"(archive
         footage)","credit_id":"551a9b89c3a36824f80016b9","order":63},{"adult":false,"gender":2,"id":6725,"known_for_department":"Acting","name":"Russ
-        Tamblyn","original_name":"Russ Tamblyn","popularity":1.788,"profile_path":"/qWpkcTJD0q5WQk4RRne7uW78611.jpg","cast_id":63,"character":"(archive
+        Tamblyn","original_name":"Russ Tamblyn","popularity":1.073,"profile_path":"/qWpkcTJD0q5WQk4RRne7uW78611.jpg","cast_id":63,"character":"(archive
         footage)","credit_id":"551a9b9192514165b7001792","order":64},{"adult":false,"gender":0,"id":1238069,"known_for_department":"Acting","name":"William
         Warfield","original_name":"William Warfield","popularity":0.6,"profile_path":null,"cast_id":64,"character":"(archive
         footage)","credit_id":"551a9b9c925141655d0016fc","order":65},{"adult":false,"gender":1,"id":129520,"known_for_department":"Acting","name":"Esther
-        Williams","original_name":"Esther Williams","popularity":1.625,"profile_path":"/ngKCKAFERxQgSsWm56t4mFNw81C.jpg","cast_id":65,"character":"(archive
+        Williams","original_name":"Esther Williams","popularity":1.688,"profile_path":"/ngKCKAFERxQgSsWm56t4mFNw81C.jpg","cast_id":65,"character":"(archive
         footage)","credit_id":"551a9ba592514165b700179c","order":66},{"adult":false,"gender":2,"id":13994,"known_for_department":"Acting","name":"Leon
-        Ames","original_name":"Leon Ames","popularity":2.272,"profile_path":"/pYwDTwWl34W7tLfN8IbSAK9QopA.jpg","cast_id":66,"character":"(archive
+        Ames","original_name":"Leon Ames","popularity":1.363,"profile_path":"/pYwDTwWl34W7tLfN8IbSAK9QopA.jpg","cast_id":66,"character":"(archive
         footage) (uncredited)","credit_id":"551a9badc3a368252a0017b6","order":67},{"adult":false,"gender":2,"id":30211,"known_for_department":"Acting","name":"Edward
-        Arnold","original_name":"Edward Arnold","popularity":2.608,"profile_path":"/acDcznSuVWTpPHtR6LJ3fJKT3c3.jpg","cast_id":67,"character":"(archive
+        Arnold","original_name":"Edward Arnold","popularity":1.982,"profile_path":"/acDcznSuVWTpPHtR6LJ3fJKT3c3.jpg","cast_id":67,"character":"(archive
         footage) (uncredited)","credit_id":"551a9bb692514164cd001911","order":68},{"adult":false,"gender":1,"id":97777,"known_for_department":"Acting","name":"Ethel
-        Barrymore","original_name":"Ethel Barrymore","popularity":1.656,"profile_path":"/2YrpVZCBUHUSuNJbtTOp4TgAsa2.jpg","cast_id":68,"character":"(archive
+        Barrymore","original_name":"Ethel Barrymore","popularity":2.097,"profile_path":"/2YrpVZCBUHUSuNJbtTOp4TgAsa2.jpg","cast_id":68,"character":"(archive
         footage) (uncredited)","credit_id":"551a9bbf925141658e0017fd","order":69},{"adult":false,"gender":2,"id":17753,"known_for_department":"Acting","name":"Lionel
-        Barrymore","original_name":"Lionel Barrymore","popularity":2.14,"profile_path":"/4vPzIVCzB21IlWX86VtFuHwMv3v.jpg","cast_id":69,"character":"(archive
+        Barrymore","original_name":"Lionel Barrymore","popularity":1.284,"profile_path":"/4vPzIVCzB21IlWX86VtFuHwMv3v.jpg","cast_id":69,"character":"(archive
         footage) (uncredited)","credit_id":"551a9bc892514165f8001821","order":70},{"adult":false,"gender":2,"id":29260,"known_for_department":"Acting","name":"Wallace
-        Beery","original_name":"Wallace Beery","popularity":2.125,"profile_path":"/b7qE3s332Wu7YcOzjBYT118UOXN.jpg","cast_id":70,"character":"(archive
+        Beery","original_name":"Wallace Beery","popularity":2.238,"profile_path":"/b7qE3s332Wu7YcOzjBYT118UOXN.jpg","cast_id":70,"character":"(archive
         footage) (uncredited)","credit_id":"551a9bd2c3a368252a0017c0","order":71},{"adult":false,"gender":2,"id":3156,"known_for_department":"Acting","name":"Joe
-        E. Brown","original_name":"Joe E. Brown","popularity":1.426,"profile_path":"/7lda0p575JsM2mbq6r5V3B7Hfc7.jpg","cast_id":71,"character":"(archive
+        E. Brown","original_name":"Joe E. Brown","popularity":1.228,"profile_path":"/7lda0p575JsM2mbq6r5V3B7Hfc7.jpg","cast_id":71,"character":"(archive
         footage) (uncredited)","credit_id":"551a9be0c3a36835c8002192","order":72},{"adult":false,"gender":2,"id":579763,"known_for_department":"Acting","name":"Xavier
-        Cugat","original_name":"Xavier Cugat","popularity":0.6,"profile_path":"/pZqbwaJrOK44EMrEpwKc6Dd5G9z.jpg","cast_id":72,"character":"(archive
+        Cugat","original_name":"Xavier Cugat","popularity":0.98,"profile_path":"/pZqbwaJrOK44EMrEpwKc6Dd5G9z.jpg","cast_id":72,"character":"(archive
         footage) (uncredited)","credit_id":"551a9bedc3a36823dc00186b","order":73},{"adult":false,"gender":1,"id":44881,"known_for_department":"Acting","name":"Arlene
-        Dahl","original_name":"Arlene Dahl","popularity":4.394,"profile_path":"/1FtddzZbFT1Amp7BR5gnrSxN6UW.jpg","cast_id":73,"character":"(archive
+        Dahl","original_name":"Arlene Dahl","popularity":4.518,"profile_path":"/1FtddzZbFT1Amp7BR5gnrSxN6UW.jpg","cast_id":73,"character":"(archive
         footage) (uncredited)","credit_id":"551a9bf69251415c3a0017a7","order":74},{"adult":false,"gender":1,"id":590617,"known_for_department":"Acting","name":"Lili
-        Damita","original_name":"Lili Damita","popularity":0.73,"profile_path":"/qxCID05o51oho6z5BUHH8EQoQzQ.jpg","cast_id":74,"character":"(archive
+        Damita","original_name":"Lili Damita","popularity":1.4,"profile_path":"/qxCID05o51oho6z5BUHH8EQoQzQ.jpg","cast_id":74,"character":"(archive
         footage) (uncredited)","credit_id":"551a9bff9251415c3a0017ab","order":75},{"adult":false,"gender":1,"id":120306,"known_for_department":"Acting","name":"Gloria
-        DeHaven","original_name":"Gloria DeHaven","popularity":1.383,"profile_path":"/jdoS7iWTklH2j5Zcb2w10qzr8VM.jpg","cast_id":75,"character":"(archive
+        DeHaven","original_name":"Gloria DeHaven","popularity":1.215,"profile_path":"/jdoS7iWTklH2j5Zcb2w10qzr8VM.jpg","cast_id":75,"character":"(archive
         footage) (uncredited)","credit_id":"551a9c0892514165f800182e","order":76},{"adult":false,"gender":2,"id":8724,"known_for_department":"Acting","name":"Errol
-        Flynn","original_name":"Errol Flynn","popularity":1.835,"profile_path":"/uh4gFoEKJpMAq4JQTwVzpVVl455.jpg","cast_id":76,"character":"(archive
+        Flynn","original_name":"Errol Flynn","popularity":1.101,"profile_path":"/uh4gFoEKJpMAq4JQTwVzpVVl455.jpg","cast_id":76,"character":"(archive
         footage) (uncredited)","credit_id":"551a9c1292514165f8001834","order":77},{"adult":false,"gender":1,"id":109614,"known_for_department":"Acting","name":"Betty
-        Garrett","original_name":"Betty Garrett","popularity":1.4,"profile_path":"/kyUVKNJtXq4azGyqJkgK3XZkNAU.jpg","cast_id":77,"character":"(archive
+        Garrett","original_name":"Betty Garrett","popularity":1.62,"profile_path":"/kyUVKNJtXq4azGyqJkgK3XZkNAU.jpg","cast_id":77,"character":"(archive
         footage) (uncredited)","credit_id":"551a9c1a92514165f8001836","order":78},{"adult":false,"gender":1,"id":93805,"known_for_department":"Acting","name":"Greer
-        Garson","original_name":"Greer Garson","popularity":1.83,"profile_path":"/6jpbH6x6r8IfOT0f3hqC7xFpQuV.jpg","cast_id":78,"character":"(archive
+        Garson","original_name":"Greer Garson","popularity":2.149,"profile_path":"/6jpbH6x6r8IfOT0f3hqC7xFpQuV.jpg","cast_id":78,"character":"(archive
         footage) (uncredited)","credit_id":"551a9c23c3a36824f80016e0","order":79},{"adult":false,"gender":1,"id":20603,"known_for_department":"Acting","name":"Hermione
-        Gingold","original_name":"Hermione Gingold","popularity":1.335,"profile_path":"/e7wwMLsdW0AAYVqVmKvApMoQpAP.jpg","cast_id":79,"character":"(archive
+        Gingold","original_name":"Hermione Gingold","popularity":1.869,"profile_path":"/e7wwMLsdW0AAYVqVmKvApMoQpAP.jpg","cast_id":79,"character":"(archive
         footage) (uncredited)","credit_id":"551a9c2cc3a3681bb50017e4","order":80},{"adult":false,"gender":2,"id":18803,"known_for_department":"Acting","name":"Van
-        Heflin","original_name":"Van Heflin","popularity":2.979,"profile_path":"/kbAT9HlIHYPRLEdeGYRD2HGblk6.jpg","cast_id":80,"character":"(archive
+        Heflin","original_name":"Van Heflin","popularity":2.094,"profile_path":"/kbAT9HlIHYPRLEdeGYRD2HGblk6.jpg","cast_id":80,"character":"(archive
         footage) (uncredited)","credit_id":"551a9c35925141658e00180e","order":81},{"adult":false,"gender":1,"id":6598,"known_for_department":"Acting","name":"Katharine
-        Hepburn","original_name":"Katharine Hepburn","popularity":3.649,"profile_path":"/hzBSOe6bburyMeeCqD9kR9tRfdD.jpg","cast_id":81,"character":"(archive
+        Hepburn","original_name":"Katharine Hepburn","popularity":4.695,"profile_path":"/hzBSOe6bburyMeeCqD9kR9tRfdD.jpg","cast_id":81,"character":"(archive
         footage) (uncredited)","credit_id":"551a9c3d9251415c970016d0","order":82},{"adult":false,"gender":2,"id":70036,"known_for_department":"Acting","name":"Claude
-        Jarman Jr.","original_name":"Claude Jarman Jr.","popularity":1.284,"profile_path":"/qRPUgk3FP6Agm5RhCLz09zSbFF8.jpg","cast_id":82,"character":"(archive
+        Jarman Jr.","original_name":"Claude Jarman Jr.","popularity":1.185,"profile_path":"/qRPUgk3FP6Agm5RhCLz09zSbFF8.jpg","cast_id":82,"character":"(archive
         footage) (uncredited)","credit_id":"551a9c46c3a368237c00199b","order":83},{"adult":false,"gender":1,"id":39554,"known_for_department":"Acting","name":"Jennifer
-        Jones","original_name":"Jennifer Jones","popularity":2.326,"profile_path":"/l8laldOj0AS3hsWTHULEJYn8XID.jpg","cast_id":83,"character":"(archive
+        Jones","original_name":"Jennifer Jones","popularity":1.898,"profile_path":"/l8laldOj0AS3hsWTHULEJYn8XID.jpg","cast_id":83,"character":"(archive
         footage) (uncredited)","credit_id":"551a9c4fc3a36835c80021a8","order":84},{"adult":false,"gender":2,"id":8635,"known_for_department":"Acting","name":"Buster
-        Keaton","original_name":"Buster Keaton","popularity":3.122,"profile_path":"/kEybBFkO5AX83o3WKyNDfuvfVrn.jpg","cast_id":84,"character":"(archive
+        Keaton","original_name":"Buster Keaton","popularity":2.937,"profile_path":"/kEybBFkO5AX83o3WKyNDfuvfVrn.jpg","cast_id":84,"character":"(archive
         footage) (uncredited)","credit_id":"551a9c58c3a36824f80016ef","order":85},{"adult":false,"gender":1,"id":14730,"known_for_department":"Acting","name":"Angela
-        Lansbury","original_name":"Angela Lansbury","popularity":3.848,"profile_path":"/fMAigMOfERlIAOUVlStRjq2COD6.jpg","cast_id":85,"character":"(archive
+        Lansbury","original_name":"Angela Lansbury","popularity":3.154,"profile_path":"/fMAigMOfERlIAOUVlStRjq2COD6.jpg","cast_id":85,"character":"(archive
         footage) (uncredited)","credit_id":"551a9c61925141658e00181e","order":86},{"adult":false,"gender":1,"id":137907,"known_for_department":"Acting","name":"Carmen
-        Miranda","original_name":"Carmen Miranda","popularity":1.708,"profile_path":"/qExsfkKG3XI70JRQQhHgxUubI2n.jpg","cast_id":86,"character":"(archive
+        Miranda","original_name":"Carmen Miranda","popularity":1.312,"profile_path":"/qExsfkKG3XI70JRQQhHgxUubI2n.jpg","cast_id":86,"character":"(archive
         footage) (uncredited)","credit_id":"551a9c69c3a36835c10022c6","order":87},{"adult":false,"gender":1,"id":11025,"known_for_department":"Acting","name":"Agnes
-        Moorehead","original_name":"Agnes Moorehead","popularity":4.641,"profile_path":"/euImuFrtJmeH4etgCBntMiWXYds.jpg","cast_id":87,"character":"(archive
+        Moorehead","original_name":"Agnes Moorehead","popularity":2.992,"profile_path":"/euImuFrtJmeH4etgCBntMiWXYds.jpg","cast_id":87,"character":"(archive
         footage) (uncredited)","credit_id":"551a9c72c3a36823dc00188c","order":88},{"adult":false,"gender":2,"id":9067,"known_for_department":"Acting","name":"Frank
-        Morgan","original_name":"Frank Morgan","popularity":2.188,"profile_path":"/vSCvrwFacSTPxxUFf94s3vTH5kA.jpg","cast_id":88,"character":"(archive
+        Morgan","original_name":"Frank Morgan","popularity":1.456,"profile_path":"/vSCvrwFacSTPxxUFf94s3vTH5kA.jpg","cast_id":88,"character":"(archive
         footage) (uncredited)","credit_id":"551a9c979251415c970016e0","order":89},{"adult":false,"gender":2,"id":103366,"known_for_department":"Acting","name":"George
-        Murphy","original_name":"George Murphy","popularity":1.433,"profile_path":"/cWFvUd0cE1EYHu6GKQf3ju1ZTbA.jpg","cast_id":89,"character":"(archive
+        Murphy","original_name":"George Murphy","popularity":1.23,"profile_path":"/cWFvUd0cE1EYHu6GKQf3ju1ZTbA.jpg","cast_id":89,"character":"(archive
         footage) (uncredited)","credit_id":"551a9ca192514164cd00194f","order":90},{"adult":false,"gender":2,"id":141600,"known_for_department":"Acting","name":"Conrad
-        Nagel","original_name":"Conrad Nagel","popularity":0.6,"profile_path":"/mqmED4nim1Zd4lK1i8Tb18zY7jV.jpg","cast_id":90,"character":"(archive
+        Nagel","original_name":"Conrad Nagel","popularity":0.98,"profile_path":"/mqmED4nim1Zd4lK1i8Tb18zY7jV.jpg","cast_id":90,"character":"(archive
         footage) (uncredited)","credit_id":"551a9caa925141658e00182a","order":91},{"adult":false,"gender":2,"id":30686,"known_for_department":"Acting","name":"J.
-        Carrol Naish","original_name":"J. Carrol Naish","popularity":3.057,"profile_path":"/xtYBFzDJQJM5KzSHDMx86l8uAvl.jpg","cast_id":91,"character":"(archive
+        Carrol Naish","original_name":"J. Carrol Naish","popularity":1.834,"profile_path":"/xtYBFzDJQJM5KzSHDMx86l8uAvl.jpg","cast_id":91,"character":"(archive
         footage) (uncredited)","credit_id":"551a9cb2c3a368252a001805","order":92},{"adult":false,"gender":2,"id":5832,"known_for_department":"Acting","name":"Reginald
-        Owen","original_name":"Reginald Owen","popularity":1.861,"profile_path":"/eurF2C1e5GwG1EE8vdAf9IOFttK.jpg","cast_id":92,"character":"(archive
+        Owen","original_name":"Reginald Owen","popularity":1.117,"profile_path":"/eurF2C1e5GwG1EE8vdAf9IOFttK.jpg","cast_id":92,"character":"(archive
         footage) (uncredited)","credit_id":"551a9cba925141093200149b","order":93},{"adult":false,"gender":2,"id":12308,"known_for_department":"Acting","name":"Walter
-        Pidgeon","original_name":"Walter Pidgeon","popularity":2.32,"profile_path":"/6qSsi9m4eYD4QxLhei08DjpW3Ck.jpg","cast_id":93,"character":"(archive
+        Pidgeon","original_name":"Walter Pidgeon","popularity":3.096,"profile_path":"/6qSsi9m4eYD4QxLhei08DjpW3Ck.jpg","cast_id":93,"character":"(archive
         footage) (uncredited)","credit_id":"551a9cc3c3a36824f8001702","order":94},{"adult":false,"gender":1,"id":95271,"known_for_department":"Acting","name":"Selena
-        Royle","original_name":"Selena Royle","popularity":0.786,"profile_path":"/SqFituJ8FRagYqvEX5tVFzbOXV.jpg","cast_id":94,"character":"(archive
+        Royle","original_name":"Selena Royle","popularity":1.036,"profile_path":"/SqFituJ8FRagYqvEX5tVFzbOXV.jpg","cast_id":94,"character":"(archive
         footage) (uncredited)","credit_id":"551a9ccc9251415c970016f4","order":95},{"adult":false,"gender":1,"id":88867,"known_for_department":"Acting","name":"Norma
-        Shearer","original_name":"Norma Shearer","popularity":0.97,"profile_path":"/ekMJFSIl6Amo5NTVA8XrwFRWC5D.jpg","cast_id":95,"character":"(archive
+        Shearer","original_name":"Norma Shearer","popularity":1.4,"profile_path":"/ekMJFSIl6Amo5NTVA8XrwFRWC5D.jpg","cast_id":95,"character":"(archive
         footage) (uncredited)","credit_id":"551a9cd5c3a368252a001815","order":96},{"adult":false,"gender":2,"id":105636,"known_for_department":"Acting","name":"Red
-        Skelton","original_name":"Red Skelton","popularity":1.336,"profile_path":"/ggaAGwn3tyP2MCpkPDCJqodTEY5.jpg","cast_id":96,"character":"(archive
+        Skelton","original_name":"Red Skelton","popularity":1.201,"profile_path":"/ggaAGwn3tyP2MCpkPDCJqodTEY5.jpg","cast_id":96,"character":"(archive
         footage) (uncredited)","credit_id":"551a9cdd92514164cd00195d","order":97},{"adult":false,"gender":2,"id":34747,"known_for_department":"Acting","name":"Sidney
-        Toler","original_name":"Sidney Toler","popularity":2.647,"profile_path":"/gpJ4PUheKfoLy3e2F8zJ5b0j5II.jpg","cast_id":97,"character":"(archive
+        Toler","original_name":"Sidney Toler","popularity":2.394,"profile_path":"/gpJ4PUheKfoLy3e2F8zJ5b0j5II.jpg","cast_id":97,"character":"(archive
         footage) (uncredited)","credit_id":"551a9ce692514164cd001961","order":98},{"adult":false,"gender":1,"id":19413,"known_for_department":"Acting","name":"Audrey
-        Totter","original_name":"Audrey Totter","popularity":0.665,"profile_path":"/erLzCB1k1mKWdgeZF25jA9q2tei.jpg","cast_id":98,"character":"(archive
+        Totter","original_name":"Audrey Totter","popularity":1.4,"profile_path":"/erLzCB1k1mKWdgeZF25jA9q2tei.jpg","cast_id":98,"character":"(archive
         footage) (uncredited)","credit_id":"551a9cef92514109320014aa","order":99},{"adult":false,"gender":2,"id":12147,"known_for_department":"Acting","name":"Spencer
-        Tracy","original_name":"Spencer Tracy","popularity":4.438,"profile_path":"/9HmmAYhUyQ3tG1ZqnqQwPNePZEM.jpg","cast_id":99,"character":"(archive
+        Tracy","original_name":"Spencer Tracy","popularity":4.531,"profile_path":"/9HmmAYhUyQ3tG1ZqnqQwPNePZEM.jpg","cast_id":99,"character":"(archive
         footage) (uncredited)","credit_id":"551a9cfbc3a36823dc0018a8","order":100},{"adult":false,"gender":2,"id":14868,"known_for_department":"Acting","name":"Robert
-        Young","original_name":"Robert Young","popularity":2.606,"profile_path":"/9nvmm7affMwv00g8espZw9FJE7Y.jpg","cast_id":100,"character":"(archive
+        Young","original_name":"Robert Young","popularity":1.982,"profile_path":"/9nvmm7affMwv00g8espZw9FJE7Y.jpg","cast_id":100,"character":"(archive
         footage) (uncredited)","credit_id":"551a9d05c3a3681bb5001816","order":101}],"crew":[{"adult":false,"gender":2,"id":1767,"known_for_department":"Editing","name":"Todd
-        C. Ramsay","original_name":"Todd C. Ramsay","popularity":0.98,"profile_path":null,"credit_id":"5bce5453925141402c0003b6","department":"Editing","job":"Assistant
+        C. Ramsay","original_name":"Todd C. Ramsay","popularity":0.6,"profile_path":null,"credit_id":"5bce5453925141402c0003b6","department":"Editing","job":"Assistant
         Editor"},{"adult":false,"gender":2,"id":1938,"known_for_department":"Sound","name":"Henry
-        Mancini","original_name":"Henry Mancini","popularity":0.722,"profile_path":"/sXl1lCYNnSf10ESG1nyCEDYGs1L.jpg","credit_id":"551a9d4092514164cd001977","department":"Sound","job":"Original
+        Mancini","original_name":"Henry Mancini","popularity":1.4,"profile_path":"/sXl1lCYNnSf10ESG1nyCEDYGs1L.jpg","credit_id":"551a9d4092514164cd001977","department":"Sound","job":"Original
         Music Composer"},{"adult":false,"gender":2,"id":8863,"known_for_department":"Editing","name":"David
         E. Blewitt","original_name":"David E. Blewitt","popularity":0.6,"profile_path":null,"credit_id":"551a9d519251415c97001719","department":"Editing","job":"Editor"},{"adult":false,"gender":2,"id":14942,"known_for_department":"Production","name":"Daniel
-        Melnick","original_name":"Daniel Melnick","popularity":1.532,"profile_path":null,"credit_id":"551a9d2c9251415c3a0017ef","department":"Production","job":"Executive
+        Melnick","original_name":"Daniel Melnick","popularity":1.26,"profile_path":null,"credit_id":"551a9d2c9251415c3a0017ef","department":"Production","job":"Executive
         Producer"},{"adult":false,"gender":2,"id":145797,"known_for_department":"Directing","name":"Jack
-        Haley Jr.","original_name":"Jack Haley Jr.","popularity":1.22,"profile_path":null,"credit_id":"551a9d16c3a3681bb500181f","department":"Directing","job":"Director"},{"adult":false,"gender":2,"id":145797,"known_for_department":"Directing","name":"Jack
-        Haley Jr.","original_name":"Jack Haley Jr.","popularity":1.22,"profile_path":null,"credit_id":"551a9d35c3a36824f800171d","department":"Production","job":"Producer"},{"adult":false,"gender":2,"id":145797,"known_for_department":"Directing","name":"Jack
-        Haley Jr.","original_name":"Jack Haley Jr.","popularity":1.22,"profile_path":null,"credit_id":"551a9d1b92514165b70017e9","department":"Writing","job":"Writer"},{"adult":false,"gender":0,"id":252878,"known_for_department":"Editing","name":"Bud
+        Haley Jr.","original_name":"Jack Haley Jr.","popularity":0.766,"profile_path":null,"credit_id":"551a9d16c3a3681bb500181f","department":"Directing","job":"Director"},{"adult":false,"gender":2,"id":145797,"known_for_department":"Directing","name":"Jack
+        Haley Jr.","original_name":"Jack Haley Jr.","popularity":0.766,"profile_path":null,"credit_id":"551a9d35c3a36824f800171d","department":"Production","job":"Producer"},{"adult":false,"gender":2,"id":145797,"known_for_department":"Directing","name":"Jack
+        Haley Jr.","original_name":"Jack Haley Jr.","popularity":0.766,"profile_path":null,"credit_id":"551a9d1b92514165b70017e9","department":"Writing","job":"Writer"},{"adult":false,"gender":0,"id":252878,"known_for_department":"Editing","name":"Bud
         Friedgen","original_name":"Bud Friedgen","popularity":0.6,"profile_path":null,"credit_id":"551a9d4b92514165b70017f1","department":"Editing","job":"Editor"},{"adult":false,"gender":0,"id":1447969,"known_for_department":"Sound","name":"Harold
         Adamson","original_name":"Harold Adamson","popularity":0.6,"profile_path":null,"credit_id":"551a9d67925141655d001765","department":"Crew","job":"Thanks"}]}'
-  recorded_at: Sun, 07 Feb 2021 19:21:27 GMT
+  recorded_at: Mon, 08 Feb 2021 22:21:04 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/33740/reviews?api_key=<MOVIE_API_KEY>
@@ -374,7 +370,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Sun, 07 Feb 2021 19:21:10 GMT
+      - Mon, 08 Feb 2021 22:21:04 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -387,27 +383,27 @@ http_interactions:
       Cache-Control:
       - public, max-age=21600
       X-Memc:
-      - MISS, STORE
+      - HIT
       X-Memc-Key:
       - fbc7a2096ebb25c8aafd4a72db7dbb290d440697
       X-Memc-Age:
-      - '0'
+      - '12736'
       X-Memc-Expires:
-      - '21600'
+      - '8864'
+      Etag:
+      - W/"096386732bec56907193749e7ac7600c"
       Last-Modified:
-      - '2020-06-12 13:07:21 +0000'
+      - Mon, 08 Feb 2021 22:21:04 GMT
       X-Cache:
-      - Hit from cloudfront
+      - Miss from cloudfront
       Via:
-      - 1.1 b53110859cfc7819470fe06f91c67857.cloudfront.net (CloudFront)
+      - 1.1 4a7d33ed6e1269d258afa1464fe1d544.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - LAX50-C2
       X-Amz-Cf-Id:
-      - Jv57WnD3PXoa4tOdrJ9-UFVfSQ7WxWNN56uUGvVFrcUgEBun_hYY5A==
-      Age:
-      - '18'
+      - s8d1bCjqGkmILptom1KW-v8zwykL9qIvrjhc-0dlBQ-fBdVfbiYRUQ==
     body:
       encoding: UTF-8
       string: '{"id":33740,"page":1,"results":[],"total_pages":0,"total_results":0}'
-  recorded_at: Sun, 07 Feb 2021 19:21:28 GMT
+  recorded_at: Mon, 08 Feb 2021 22:21:04 GMT
 recorded_with: VCR 6.0.0
