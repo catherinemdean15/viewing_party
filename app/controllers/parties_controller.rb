@@ -1,31 +1,28 @@
 class PartiesController < ApplicationController
-  def new
-    @movie_title = params[:party][:movie_title]
-    @movie_run_time = params[:party][:movie_run_time]
-    @movie_id = params[:party][:movie_id]
-  end
+  def new; end
 
   def create
-    create_movie unless Movie.exists?(params[:party][:id])
+    create_movie unless Movie.exists?(params[:party][:movie_id])
     create_party
   end
 
   def create_party
     @party = Party.new(party_params)
-    @party.update(movie_id: params[:party][:id])
+    @party.update(movie_id: params[:party][:movie_id])
     if @party.save
       flash[:notice] = 'You have made a new party!'
       redirect_to dashboard_user_path(current_user)
       invite_guests
     else
       flash[:notice] = 'Please complete all forms'
-      render :new
+      render :new, action: @party
     end
   end
 
   def create_movie
-    movie = Movie.new(movie_params)
-    movie.save
+    Movie.create!(id: params[:party][:movie_id],
+                  title: params[:party][:movie_title],
+                  run_time: params[:party][:movie_run_time])
   end
 
   def invite_guests
@@ -40,9 +37,5 @@ class PartiesController < ApplicationController
 
   def party_params
     params.require(:party).permit(:date, :start_time, :duration)
-  end
-
-  def movie_params
-    params.require(:party).permit(:id, :title, :run_time)
   end
 end
