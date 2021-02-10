@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def new
     if current_user
-      redirect_to dashboard_user_path(user), notice: 'You are already logged in!'
+      redirect_to dashboard_user_path(current_user), notice: 'You are already logged in!'
     end
   end
 

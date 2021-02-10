@@ -2,12 +2,12 @@ require 'rails_helper'
 
 RSpec.describe 'dashboard index' do
   before :each do
-    @user = User.create!(email: 'test5@gmail.com', password: 'test5test5', is_registered?: true)
+    @user = User.create!(email: 'test5@gmail.com', password: 'test5test5')
 
     @user.authenticate(@user.password)
-    @friend_1 = User.create!(email: 'friend1@email.com', password: 'password', is_registered?: true)
-    @friend_2 = User.create!(email: 'friend2@email.com', password: 'password', is_registered?: true)
-    @friend_3 = User.create!(email: 'friend3@email.com', password: 'password', is_registered?: true)
+    @friend_1 = User.create!(email: 'friend1@email.com', password: 'password')
+    @friend_2 = User.create!(email: 'friend2@email.com', password: 'password')
+    @friend_3 = User.create!(email: 'friend3@email.com', password: 'password')
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
     @movie_1 = Movie.create!(title: 'Mulan', run_time: '1 hour 12 min')

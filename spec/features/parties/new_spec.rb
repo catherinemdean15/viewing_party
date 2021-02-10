@@ -3,15 +3,15 @@ require 'rails_helper'
 RSpec.describe 'As an authenticated user', type: :feature do
   describe 'When I visit the create a new party page' do
     before(:each) do
-      @user = User.create!(email: 'test5@gmail.com', password: 'test5test5', is_registered?: true)
+      @user = User.create!(email: 'test5@gmail.com', password: 'test5test5')
       @user.authenticate(@user.password)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
       @movie_1 = Movie.create!(id: '337401')
 
-      @friend_1 = User.create!(email: 'friend1@email.com', password: 'password', is_registered?: true)
-      @friend_2 = User.create!(email: 'friend2@email.com', password: 'password', is_registered?: true)
-      @friend_3 = User.create!(email: 'friend3@email.com', password: 'password', is_registered?: true)
+      @friend_1 = User.create!(email: 'friend1@email.com', password: 'password')
+      @friend_2 = User.create!(email: 'friend2@email.com', password: 'password')
+      @friend_3 = User.create!(email: 'friend3@email.com', password: 'password')
       Friend.create!(friend1_id: @user.id, friend2_id: @friend_1.id)
       Friend.create!(friend1_id: @user.id, friend2_id: @friend_2.id)
       Friend.create!(friend1_id: @user.id, friend2_id: @friend_3.id)

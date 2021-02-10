@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'As an authenticated user', type: :feature do
   describe 'When I visit the discover movies page' do
     before(:each) do
-      @user = User.create!(email: 'test5@gmail.com', password: 'test5test5', is_registered?: true)
+      @user = User.create!(email: 'test5@gmail.com', password: 'test5test5')
       @user.authenticate(@user.password)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
