@@ -22,7 +22,7 @@ RSpec.describe 'dashboard index' do
   end
 
   it 'has a section that welcomes the user' do
-    expect(page).to have_content("Welcome #{@user.email}")
+    expect(page).to have_content("Welcome, #{@user.email}")
   end
 
   it 'has a button to search for movies' do
