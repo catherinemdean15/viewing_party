@@ -9,8 +9,10 @@ RSpec.describe "users new page" do
 
   it "can create a new user" do 
     visit registration_path
+
     user_email = "test5@gmail.com"
     user_password = "test5test5"
+
     fill_in "user[email]", with: user_email
     fill_in "user[password]", with: user_password
     fill_in "user[password_confirmation]", with: user_password
@@ -31,5 +33,17 @@ RSpec.describe "users new page" do
     click_button 'Register'
     expect(current_path).to eq(registration_path)
     expect(page).to have_content("Passwords do not match")
+  end
+
+  it "displays error message for missing information for a new user" do 
+    visit registration_path
+
+    user_email = "test5@gmail.com"
+    user_password = "test5test5"
+    
+    fill_in "user[email]", with: user_email
+    click_button 'Register'
+
+    expect(page).to have_content("Password can't be blank")
   end
 end
