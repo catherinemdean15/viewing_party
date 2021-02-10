@@ -11,11 +11,11 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to dashboard_user_path(user)
     else
-      if !matching_password?
-        flash[:notice] = "Passwords do not match"
-      else 
-        flash.now[:errors] = user.errors.full_messages
-      end
+      flash[:notice] = if !matching_password?
+                         'Passwords do not match'
+                       else
+                         'Please fill in both an email and a password'
+                       end
       redirect_to registration_path
     end
   end
