@@ -7,7 +7,7 @@ class MovieFacade
 
   def self.find_movies(search)
     params = { query: search, include_adult: true, page: 1 }
-     
+
     matching_movies = MovieService.call_moviedb('/3/search/movie', params)[:results]
     params[:page] += 1
     matching_movies << MovieService.call_moviedb('/3/search/movie', params)[:results]

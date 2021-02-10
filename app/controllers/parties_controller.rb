@@ -5,7 +5,7 @@ class PartiesController < ApplicationController
     Movie.find_or_create_by(id: session[:movie_id],
                             title: session[:movie_title],
                             run_time: session[:movie_run_time])
-    if party_params[:date].to_date >= Date.today
+    if party_params[:date].to_date >= Time.zone.today
       create_party
     else
       flash[:notice] = 'Party date must not be in the past'
@@ -18,7 +18,8 @@ class PartiesController < ApplicationController
     if @party.save
       flash[:notice] = 'You have made a new party!'
       redirect_to dashboard_user_path(current_user)
-      invite_guests
+      PartiesUser.create!(party_id: @party.id, user_id: current_user.id, host: true)
+      invite_guests if params['User']
     else
       flash[:notice] = 'Please complete all forms'
       render :new, action: @party
@@ -26,12 +27,9 @@ class PartiesController < ApplicationController
   end
 
   def invite_guests
-    PartiesUser.create!(party_id: @party.id, user_id: current_user.id, host: true)
-    if params['User']
-      invited_user_ids = params['User'].select { |_key, value| value == '1' }
-      invited_user_ids.each do |user_id, _value|
-        PartiesUser.create!(party_id: @party.id, user_id: user_id, host: false)
-      end
+    invited_user_ids = params['User'].select { |_key, value| value == '1' }
+    invited_user_ids.each do |user_id, _value|
+      PartiesUser.create!(party_id: @party.id, user_id: user_id, host: false)
     end
   end
 
