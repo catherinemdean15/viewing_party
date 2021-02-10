@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
 
-  validates :email, presence: true, uniqueness: true
+  validates :email, presence: true 
+  validates_uniqueness_of :email, case_sensitive: false 
             # format: {with: /^\w{3,20}@\w{3,20}.\w{3}/, message: 'Invalid email'}
   validates :password, presence: true, confirmation: true
 
@@ -13,19 +14,21 @@ class User < ApplicationRecord
 
   before_save :downcase_email
 
-  def downcase_email
-    self.email.downcase!
-  end
-  
   def invited_parties
     parties.joins(:parties_users).where('parties_users.host = false').uniq
   end
-
+  
   def hosted_parties
     parties.joins(:parties_users).where('parties_users.host = true').uniq
   end
-
+  
   def no_followers?
     followings.empty?
+  end
+  
+  private 
+  
+  def downcase_email
+    email.try(:downcase!)
   end
 end
