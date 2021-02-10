@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_08_012000) do
+ActiveRecord::Schema.define(version: 2021_02_09_220622) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2021_02_08_012000) do
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.string "run_time"
+    t.bigint "movie_id"
+    t.decimal "average_vote", precision: 3, scale: 1
   end
 
   create_table "parties", force: :cascade do |t|
@@ -46,7 +48,6 @@ ActiveRecord::Schema.define(version: 2021_02_08_012000) do
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
-    t.boolean "is_registered?", default: false
   end
 
   add_foreign_key "friends", "users", column: "friend1_id"

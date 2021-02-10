@@ -17,10 +17,10 @@ RSpec.describe User, type: :model do
 
   describe 'instance methods' do
     before :each do
-      @user = User.create!(email: 'test5@gmail.com', password: 'test5test5', is_registered?: true)
+      @user = User.create!(email: 'test5@gmail.com', password: 'test5test5')
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
       @user.authenticate(@user.password)
-      @friend = User.create!(email: 'friend1@email.com', password: 'password', is_registered?: true)
+      @friend = User.create!(email: 'friend1@email.com', password: 'password')
 
       @movie_1 = Movie.create!(title: 'Mulan', run_time: '1 hour 12 min')
       @movie_2 = Movie.create!(title: 'Oceans 11', run_time: '2 hours 10 min')
