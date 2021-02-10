@@ -7,7 +7,7 @@ RSpec.describe 'As an authenticated user', type: :feature do
       @user.authenticate(@user.password)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
-      @movie_1 = Movie.create!(id: '337401')
+      @movie_1 = Movie.create!(id: '337401', title: 'Mulan', run_time: '115')
 
       @friend_1 = User.create!(email: 'friend1@email.com', password: 'password', is_registered?: true)
       @friend_1.authenticate(@friend_1.password)

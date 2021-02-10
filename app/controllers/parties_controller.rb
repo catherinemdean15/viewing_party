@@ -2,7 +2,7 @@ class PartiesController < ApplicationController
   def new; end
 
   def create
-    create_movie unless Movie.exists?(params[:party][:movie_id])
+    Movie.find_or_create_by(movie_params)
     create_party
   end
 
@@ -16,12 +16,6 @@ class PartiesController < ApplicationController
       flash[:notice] = 'Please complete all forms'
       render :new, action: @party
     end
-  end
-
-  def create_movie
-    Movie.create!(id: params[:party][:movie_id],
-                  title: params[:party][:movie_title],
-                  run_time: params[:party][:movie_run_time])
   end
 
   def invite_guests
@@ -38,5 +32,13 @@ class PartiesController < ApplicationController
 
   def party_params
     params.require(:party).permit(:date, :start_time, :duration, :movie_id)
+  end
+
+  def movie_params
+    movie_params = params.require(:party).permit(:movie_id, :movie_title, :movie_run_time)
+    movie_params[:id] = movie_params.delete(:movie_id)
+    movie_params[:title] = movie_params.delete(:movie_title)
+    movie_params[:run_time] = movie_params.delete(:movie_run_time)
+    movie_params
   end
 end

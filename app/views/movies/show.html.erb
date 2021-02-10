@@ -1,10 +1,17 @@
 
 <h1><%= @movie.title %></h1>
-<%= form_with model: Party, method: :get, url: new_user_party_path(current_user), local: true do |f| %>
-  <%= f.hidden_field :movie_title, value: @movie.title %>
-  <%= f.hidden_field :movie_id, value: @movie.id %>
-  <%= f.hidden_field :movie_run_time, value: @movie.run_time %>
-  <%= f.submit 'Create a Viewing Party'%>
+
+<% if current_user %>
+  <%= form_with model: Party, method: :get, url: new_user_party_path(current_user), local: true do |f| %>
+    <%= f.hidden_field :movie_title, value: @movie.title %>
+    <%= f.hidden_field :movie_id, value: @movie.id %>
+    <%= f.hidden_field :movie_run_time, value: @movie.run_time %>
+    <%= f.submit 'Create a Viewing Party'%>
+  <% end %>
+<% else %>
+<p> Log in or Register to Create a Viewing Party <br>
+  <%= button_to "Log In", login_path, method: :get %><br>
+  <%= button_to "Register", registration_path, method: :get %> </p>
 <% end %>
 
 <ul>
