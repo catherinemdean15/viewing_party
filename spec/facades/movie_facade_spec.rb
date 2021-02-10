@@ -16,7 +16,7 @@ describe MovieFacade do
     end
 
     it "returns top movies", :vcr do
-      search = MovieFacade.get_top_forty
+      search = MovieFacade.find_top_forty
       expect(search).to be_an Array
       movie_data = search.first
       expect(movie_data).to be_a Hash

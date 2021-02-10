@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def create
     user = User.new(user_params)
     if matching_password? && user.save
+      UserMailer.welcome_email(user).deliver_now
       flash[:notice] = 'You signed up successfully'
       session[:user_id] = user.id
       redirect_to dashboard_user_path(user)

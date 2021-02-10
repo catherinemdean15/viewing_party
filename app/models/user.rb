@@ -5,11 +5,11 @@ class User < ApplicationRecord
             # format: {with: /^\w{3,20}@\w{3,20}.\w{3}/, message: 'Invalid email'}
   validates :password, presence: true, confirmation: true
 
-  has_many :friends, foreign_key: :friend1_id
-  has_many :followings, through: :friends, source: :friend2
+  has_many :friends, dependent: :destroy, foreign_key: :friend1_id
+  has_many :followings, dependent: :destroy, through: :friends, source: :friend2
 
-  has_many :parties_users
-  has_many :parties, through: :parties_users
+  has_many :parties_users, dependent: :destroy
+  has_many :parties, dependent: :destroy, through: :parties_users
 
   before_save :downcase_email
 
