@@ -1,8 +1,9 @@
 class User < ApplicationRecord
   has_secure_password
 
-  validates :email, presence: true, uniqueness: true
-  # format: {with: /^\w{3,20}@\w{3,20}.\w{3}/, message: 'Invalid email'}
+  validates :email, presence: true 
+  validates_uniqueness_of :email, case_sensitive: false 
+            # format: {with: /^\w{3,20}@\w{3,20}.\w{3}/, message: 'Invalid email'}
   validates :password, presence: true, confirmation: true
 
   has_many :friends, dependent: :destroy, foreign_key: :friend1_id
@@ -14,12 +15,13 @@ class User < ApplicationRecord
   def invited_parties
     parties.joins(:parties_users).where('parties_users.host = false').uniq
   end
-
+  
   def hosted_parties
     parties.joins(:parties_users).where('parties_users.host = true').uniq
   end
-
+  
   def no_followers?
     followings.empty?
   end
+  
 end

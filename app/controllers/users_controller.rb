@@ -11,11 +11,8 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to dashboard_user_path(user)
     else
-      flash[:notice] = if !matching_password?
-                         'Passwords do not match'
-                       else
-                         'Please fill in both an email and a password'
-                       end
+      flash[:notice] = 'Please fill in both an email and a password'
+      flash[:notice] = "Passwords do not match" if !matching_password?
       redirect_to registration_path
     end
   end
@@ -29,6 +26,7 @@ class UsersController < ApplicationController
   def user_params
     params[:user][:email].downcase!
     params.require(:user).permit(:email, :password)
+
   end
 
   def matching_password?
