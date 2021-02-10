@@ -1,6 +1,8 @@
-<%= form_with model: @user, local: true  do |f| %>
-  <p>Email: <%= f.text_field :email %></p>
-  <p>Password: <%= f.password_field :password %></p>
-  <p>Password Confirmation: <%= f.password_field :password_confirmation %></p>
-  <%= f.submit :Register %>
-<% end %> 
+<section id="registration_form">
+  <%= form_with model: @user, local: true  do |f| %>
+    <p>Email: <%= f.text_field :email %></p>
+    <p>Password: <%= f.password_field :password %></p>
+    <p>Password Confirmation: <%= f.password_field :password_confirmation %></p>
+    <%= f.submit :Register %>
+  <% end %>
+</section>

@@ -12,8 +12,6 @@ class User < ApplicationRecord
   has_many :parties_users, dependent: :destroy
   has_many :parties, dependent: :destroy, through: :parties_users
 
-  before_save :downcase_email
-
   def invited_parties
     parties.joins(:parties_users).where('parties_users.host = false').uniq
   end
@@ -26,9 +24,4 @@ class User < ApplicationRecord
     followings.empty?
   end
   
-  private 
-  
-  def downcase_email
-    email.try(:downcase!)
-  end
 end

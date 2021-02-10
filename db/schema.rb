@@ -27,8 +27,6 @@ ActiveRecord::Schema.define(version: 2021_02_09_220622) do
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.string "run_time"
-    t.bigint "movie_id"
-    t.decimal "average_vote", precision: 3, scale: 1
   end
 
   create_table "parties", force: :cascade do |t|
