@@ -2,7 +2,9 @@ class PartiesController < ApplicationController
   def new; end
 
   def create
-    Movie.find_or_create_by(movie_params)
+    Movie.find_or_create_by(id: session[:movie_id],
+                            title: session[:movie_title],
+                            run_time: session[:movie_run_time])
     if party_params[:date].to_date >= Date.today
       create_party
     else
@@ -36,14 +38,8 @@ class PartiesController < ApplicationController
   private
 
   def party_params
-    params.require(:party).permit(:date, :start_time, :duration, :movie_id)
-  end
-
-  def movie_params
-    movie_params = params.require(:party).permit(:movie_id, :movie_title, :movie_run_time)
-    movie_params[:id] = movie_params.delete(:movie_id)
-    movie_params[:title] = movie_params.delete(:movie_title)
-    movie_params[:run_time] = movie_params.delete(:movie_run_time)
-    movie_params
+    party_info = params.require(:party).permit(:date, :start_time, :duration)
+    party_info[:movie_id] = session[:movie_id]
+    party_info
   end
 end
