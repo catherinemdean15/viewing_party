@@ -72,6 +72,27 @@ RSpec.describe 'As an authenticated user', type: :feature do
       expect(page).to have_content('Invited')
     end
 
+    it 'does not create a new party when date is in the past', :vcr do
+      Friend.create!(friend1_id: @user.id, friend2_id: @friend_1.id)
+      Friend.create!(friend1_id: @user.id, friend2_id: @friend_2.id)
+      Friend.create!(friend1_id: @user.id, friend2_id: @friend_3.id)
+
+      visit discover_path(@user)
+
+      fill_in 'movie[search]', with: 'Nacho'
+      click_button 'Find Movie'
+
+      click_link 'Nacho Libre'
+      click_button 'Create a Viewing Party'
+
+      fill_in 'party[date]', with: '2019/03/12'
+      fill_in 'party[start_time]', with: '3:00 PM'
+      check "User[#{@friend_1.id}]"
+      click_button 'Create new Party'
+
+      expect(page).to have_content('Party date must not be in the past')
+    end
+
     it "creates a party when you don't have any friends", :vcr do
       visit movie_path(@movie_1.id)
 

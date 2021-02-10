@@ -3,7 +3,12 @@ class PartiesController < ApplicationController
 
   def create
     Movie.find_or_create_by(movie_params)
-    create_party
+    if party_params[:date].to_date >= Date.today
+      create_party
+    else
+      flash[:notice] = 'Party date must not be in the past'
+      render :new, action: @party
+    end
   end
 
   def create_party
