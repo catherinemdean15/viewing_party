@@ -13,5 +13,8 @@ class MoviesController < ApplicationController
 
   def show
     @movie = MovieFacade.movie_details(params[:id])
+    session[:movie_id] = @movie.id
+    session[:movie_title] = @movie.title
+    session[:movie_run_time] = @movie.run_time
   end
 end
