@@ -62,18 +62,6 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "viewing_party_#{Rails.env}"
-  config.action_mailer.default_options = {:host => 'stormy-bastion-67887.herokuapp.com'}
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                 587,
-  domain:               'gmail.com',
-  user_name:            'joejviewingparty@gmail.com',
-  password:             'Viewparty2010!',
-  authentication:       'plain',
-  enable_starttls_auto: true  }
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
