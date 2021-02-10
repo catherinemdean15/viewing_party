@@ -32,4 +32,16 @@ RSpec.describe "users new page" do
     expect(current_path).to eq(registration_path)
     expect(page).to have_content("Passwords do not match")
   end
+
+  it "downcases email address before saving to database" do
+    visit registration_path
+    user_email = "TEST5@gmail.com"
+    user_password = "test5test5"
+    fill_in "user[email]", with: user_email
+    fill_in "user[password]", with: user_password
+    fill_in "user[password_confirmation]", with: user_password
+    click_button 'Register'
+    user = User.find_by(email: "test5@gmail.com")
+    expect(user.email).to eq(user_email.downcase)
+  end
 end
