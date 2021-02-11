@@ -20,8 +20,7 @@ class PartiesController < ApplicationController
       redirect_to dashboard_user_path(current_user)
       PartiesUser.create!(party_id: @party.id, user_id: current_user.id, host: true)
       invite_guests if params['User']
-      UserMailer.party_host_email(@party).deliver_now
-      UserMailer.party_guests_email(@party).deliver_now
+      send_emails
     else
       flash[:notice] = 'Please complete all forms'
       render :new, action: @party
@@ -34,8 +33,13 @@ class PartiesController < ApplicationController
       PartiesUser.create!(party_id: @party.id, user_id: user_id, host: false)
     end
   end
-
+  
   private
+
+  def send_emails
+    UserMailer.party_host_email(@party).deliver_now
+    UserMailer.party_guests_email(@party).deliver_now
+  end
 
   def party_params
     party_info = params.require(:party).permit(:date, :start_time, :duration)

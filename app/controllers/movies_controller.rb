@@ -5,7 +5,7 @@ class MoviesController < ApplicationController
       @movies = MovieFacade.find_top_forty
     elsif params[:commit] == 'Find Movie'
       @movies = MovieFacade.find_movies(params[:movie][:search])
-    elsif params[:genre_name] 
+    elsif params[:genre_name]
       @movies = MovieFacade.top_ten_movies_by_genre(params[:genre_name])
     end
     flash[:notice] = 'There are no movies with that title. Please try again' if @movies.empty?
