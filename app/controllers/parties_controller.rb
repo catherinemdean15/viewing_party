@@ -33,7 +33,7 @@ class PartiesController < ApplicationController
       PartiesUser.create!(party_id: @party.id, user_id: user_id, host: false)
     end
   end
-  
+
   private
 
   def send_emails
@@ -45,9 +45,5 @@ class PartiesController < ApplicationController
     party_info = params.require(:party).permit(:date, :start_time, :duration)
     party_info[:movie_id] = session[:movie_id]
     party_info
-  end
-
-  def confirmation_email
-    @guests if params['User']
   end
 end
