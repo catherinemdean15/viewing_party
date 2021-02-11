@@ -30,5 +30,8 @@ Style/SafeNavigation:
 Metrics/AbcSize:
   Enabled: false
 
+Metrics/MethodLength:
+  Max: 15
+
 Rails/UniqueValidationWithoutIndex:
   Enabled: false
