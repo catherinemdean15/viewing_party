@@ -62,7 +62,6 @@ RSpec.describe 'users new page' do
       fill_in 'user[email]', with: user_email
       click_button 'Register'
     end
-
-    expect(page).to have_content('Please fill in both an email and a password')
+    expect(page).to have_content("Password can't be blank")
   end
 end
