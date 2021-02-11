@@ -10,7 +10,7 @@ class UserMailer < ApplicationMailer
     @guests = party.guests
     @movie_title = party.movie.title
     @party = party
-    @hosts.each do |host| 
+    @hosts.each do |host|
       mail(to: host.email, subject: 'Viewing Party details')
     end
   end
