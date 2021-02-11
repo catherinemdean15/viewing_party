@@ -64,4 +64,15 @@ RSpec.describe 'users new page' do
     end
     expect(page).to have_content("Password can't be blank")
   end
+
+  it 'does not allow user to register without email' do 
+    visit registration_path
+
+    within('#registration_form') do
+      fill_in 'user[password]', with: 'test5@gmail.com'
+      fill_in 'user[password_confirmation]', with: 'test5@gmail.com'
+      click_button 'Register'
+    end
+    expect(page).to have_content("Email can't be blank")
+  end
 end

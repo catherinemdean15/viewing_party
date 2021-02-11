@@ -28,7 +28,9 @@ class MovieFacade
     movies_by_genre = []
     until movies_by_genre.count >= 10
       movies = MovieService.call_moviedb('/3/discover/movie?', params)[:results]
-      movies.each { |movie| movies_by_genre << movie if movie[:genre_ids].include?(genre_id) && movie[:vote_average] > 8.0 }
+      if movie[:genre_ids].include?(genre_id) && movie[:vote_average] > 8.0
+        movies.each { |movie| movies_by_genre << movie }
+      end
       params[:page] += 1
     end
     movies_by_genre
