@@ -19,6 +19,7 @@ class PartiesController < ApplicationController
       flash[:notice] = 'You have made a new party!'
       redirect_to dashboard_user_path(current_user)
       PartiesUser.create!(party_id: @party.id, user_id: current_user.id, host: true)
+      UserMailer.party_email_host(@party).deliver_now
       invite_guests if params['User']
     else
       flash[:notice] = 'Please complete all forms'
@@ -39,5 +40,9 @@ class PartiesController < ApplicationController
     party_info = params.require(:party).permit(:date, :start_time, :duration)
     party_info[:movie_id] = session[:movie_id]
     party_info
+  end
+
+  def confirmation_email
+    @guests if params['User']
   end
 end
