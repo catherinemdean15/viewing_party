@@ -9,6 +9,7 @@ Viewing party is an application in which users can explore movie options and cre
 - [Achievements](#achievements)
 - [Instructions](#instructions)
 - [Design Strategy](#design-strategy)
+- [Future Functionality](#future-functionality)
 - [Contributors](#contributors)
 - [Acknowledgements](#acknowledgements)
 
@@ -34,7 +35,7 @@ Now, navigate to `http://localhost:3000/` on your browser to view the applicatio
 This is the base repo for the [viewing party project](https://backend.turing.io/module3/projects/viewing_party) used for Turing's Backend Module 3.
 
 ## Design Strategy
-The design strategy of Night Writer was to fully encapsulate each piece of functionality of the program and use a module for access to the translation alphabet and the functionality to query it. The program uses the following structure:
+The design strategy of Viewing Party was to fully encapsulate each piece of functionality of the program and minimally store data, while avoiding API consumption limits:
 
 ### Users Table
 - The Users Table represents all registered users for the viewing party application. Users are represented in the application as the current user and can also be represented as a friend of another registered user.
@@ -52,7 +53,7 @@ The design strategy of Night Writer was to fully encapsulate each piece of funct
 ## Achievements
 - Continuous deployment to both Heroku and Travis.
 - Utilized TDD to ensure comprehensive application functionality, including both 'happy' and 'sad' paths.
-- Utilized principles of MVC to effectively organize code.
+- Applied principles of MVC to effectively organize code.
 - Routing is organized and consistent and demonstrates use RESTful principles.
 - All User Stories 100% complete including edge cases.
 - 100% test coverage for features and models.
@@ -60,6 +61,16 @@ The design strategy of Night Writer was to fully encapsulate each piece of funct
 - Clear schema design with detailed and accurate diagram.
 - Relationships modeled in the database correctly, including appropriate use of foreign keys.
 - Project completed within seven-day time frame.
+- Implemented ActionMailer to email users and their guests of Viewing Party details
+- Utilized self-referential tables to allow users to have and belong to other users.
+- Added functionality via multiple API endpoints to create a dynamic user experience.
+- Authenticated user login via sessions implementation.  
+## Future Functionality
+- Allow users to include a message or link when a new party is created.
+- Include movie poster on both the discover and movie details page.
+- Enable chat capability via ActionCable.
+- Utilize JavaScript to update discover methods using Ajax.
+- Allow users to add multiple hosts to a party. 
 ## Contributors 
 1. [Joe Jiang](https://github.com/ninesky00)
 2. [Catherine Dean](https://github.com/catherinemdean15)
