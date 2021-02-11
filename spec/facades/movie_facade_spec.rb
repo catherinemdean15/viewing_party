@@ -40,5 +40,14 @@ describe MovieFacade do
       expect(search.cast).to be_an(Array)
       expect(search.reviews).to be_an(Array)
     end
+
+    it "lists movie by genre", :vcr do
+      movie = MovieFacade.top_ten_movies_by_genre('Drama')
+      
+      expect(movie).to be_an Array
+      expect(movie.first).to be_a Hash
+      expect(movie.first[:genre_ids][0]).to be_a Numeric
+      
+    end
   end
 end

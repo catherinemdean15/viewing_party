@@ -1,4 +1,9 @@
 <%= button_to 'Find Top Rated Movies', movies_path(current_user), params:{search: 'top_movies'}, method: :get%> 
+<h4>Discover Top Ten Movies by Genre</h4>
+<%= button_to 'Comedy', movies_path(current_user), params:{genre_name: 'Comedy'}, method: :get%> 
+<%= button_to 'Sci-Fi', movies_path(current_user), params:{genre_name: 'Science Fiction'}, method: :get%> 
+<%= button_to 'Thriller', movies_path(current_user), params:{genre_name: 'Thriller'}, method: :get%> 
+<%= button_to 'Drama', movies_path(current_user), params:{genre_name: 'Drama'}, method: :get%><br>
 
  <%= form_with model: Movie, method: :get, url: movies_path(current_user), local: true do |f| %>
   <%= f.text_field :search, value: 'Search by Movie Title' %>

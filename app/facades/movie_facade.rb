@@ -20,4 +20,17 @@ class MovieFacade
     reviews = MovieService.call_moviedb("/3/movie/#{id}/reviews")
     MovieResult.new(info, cast, reviews)
   end
+
+  def self.top_ten_movies_by_genre(genre_name)
+    genres = MovieService.call_moviedb("3/genre/movie/list?")[:genres]
+    genre_id = genres.find { |name| name[:name] == genre_name }[:id] 
+    params = { page: 1 }
+    movies_by_genre = []
+    until movies_by_genre.count >= 10 do
+      movies = MovieService.call_moviedb("/3/discover/movie?", params)[:results]
+      movies.each { |movie| movies_by_genre << movie if movie[:genre_ids].include?(genre_id) && movie[:vote_average] > 8.0 }
+      params[:page] += 1
+    end
+    movies_by_genre
+  end
 end

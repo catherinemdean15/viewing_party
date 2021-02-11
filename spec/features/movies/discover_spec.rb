@@ -43,5 +43,18 @@ RSpec.describe 'As an authenticated user', type: :feature do
       expect(current_path).to eq(movies_path(@user))
       expect(page).to have_content('There are no movies with that title. Please try again')
     end
+
+    it 'I should see all available movies genres to search by', :vcr do
+      expect(page).to have_content('Discover Top Ten Movies by Genre')
+      expect(page).to have_button('Comedy')
+      expect(page).to have_button('Sci-Fi')
+      expect(page).to have_button('Drama')
+      expect(page).to have_button('Thriller')
+
+      click_button 'Comedy'
+
+      expect(current_path).to eq(movies_path(@user))
+      expect(page).to have_content('Soul')
+    end
   end
 end

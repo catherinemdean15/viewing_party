@@ -24,8 +24,6 @@ http_interactions:
       - '57'
       Connection:
       - keep-alive
-      Date:
-      - Mon, 08 Feb 2021 22:21:06 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -35,22 +33,24 @@ http_interactions:
       Access-Control-Expose-Headers:
       - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
         Content-Length, Content-Range
-      Etag:
-      - a8d277d2d95f2ea20f792a48c43093dc
+      Date:
+      - Wed, 10 Feb 2021 23:52:05 GMT
       Cache-Control:
       - public, max-age=600
+      Etag:
+      - a8d277d2d95f2ea20f792a48c43093dc
       X-Cache:
-      - Miss from cloudfront
+      - RefreshHit from cloudfront
       Via:
-      - 1.1 12435f922f48ee227c1e888952ed66ac.cloudfront.net (CloudFront)
+      - 1.1 8dabec3009252f87adad4ea8e2f9d8f8.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - LAX50-C2
       X-Amz-Cf-Id:
-      - NB01r3XYatJhU6Dli5LZ6Kek1SDfDyeAvYtw_k7Igo-Y8tDMhTMBFQ==
+      - 86jINYStwuL-n7AJ1qwbilfCPSyKMj4NTl7tHcsnQd92stmUUqJi6w==
     body:
       encoding: UTF-8
       string: '{"page":1,"results":[],"total_pages":0,"total_results":0}'
-  recorded_at: Mon, 08 Feb 2021 22:21:06 GMT
+  recorded_at: Wed, 10 Feb 2021 23:52:05 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/search/movie?api_key=<MOVIE_API_KEY>&include_adult=true&page=2&query=jklih
@@ -75,8 +75,6 @@ http_interactions:
       - '57'
       Connection:
       - keep-alive
-      Date:
-      - Mon, 08 Feb 2021 22:21:06 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -86,20 +84,22 @@ http_interactions:
       Access-Control-Expose-Headers:
       - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
         Content-Length, Content-Range
-      Etag:
-      - daeb628883c68203dc276731d4722f32
+      Date:
+      - Wed, 10 Feb 2021 23:52:05 GMT
       Cache-Control:
       - public, max-age=600
+      Etag:
+      - daeb628883c68203dc276731d4722f32
       X-Cache:
-      - Miss from cloudfront
+      - RefreshHit from cloudfront
       Via:
-      - 1.1 be269f241b5cfb9cadc0ea3610022758.cloudfront.net (CloudFront)
+      - 1.1 9de47a1dc97604e747abf99432071d94.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - LAX50-C2
       X-Amz-Cf-Id:
-      - zl0junmPeXPOAjN7nVL5XVUYAayh26ERn3fcOc03H3HhlE4unEvMEQ==
+      - lm73UTjuLM2GqYeTa8osNj748xeKmIrvdzUNqjkvApYdVHtx46_rdw==
     body:
       encoding: UTF-8
       string: '{"page":2,"results":[],"total_pages":0,"total_results":0}'
-  recorded_at: Mon, 08 Feb 2021 22:21:06 GMT
+  recorded_at: Wed, 10 Feb 2021 23:52:05 GMT
 recorded_with: VCR 6.0.0
