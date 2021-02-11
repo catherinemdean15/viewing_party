@@ -1,0 +1,13 @@
+<h1>You have successfully created a ViewingParty</h1>
+<p>
+  You will be watching <%= @movie_title %>
+</p>
+<p>
+  Your party is on <%= @party.date.strftime('%B %d, %Y') %> at <%= @party.start_time.strftime('%l:%M %p') %>
+</p>
+<p>You invited
+<% @guests.each do |guest| %>
+  <%= guest.email %>
+<% end %>
+  to your viewing party.
+</p>
