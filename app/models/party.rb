@@ -10,7 +10,7 @@ class Party < ApplicationRecord
   end
 
   def guests
-    users.joins(:parties_users).group(:id).where('parties_users.host = ?', false)
+    users.joins(:parties_users).group(:id).where('parties_users.host = ?', false).order(:id => :desc) 
   end
   
 end

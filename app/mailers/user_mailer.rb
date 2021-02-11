@@ -5,18 +5,21 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Welcome to Viewing Party')
   end
 
-  def party_email_host(party)
-    binding.pry
-    @user = host
+  def party_host_email(party)
+    @hosts = party.host
+    @guests = party.guests
+    @movie_title = party.movie.title
     @party = party
-    @guest = guests
-    mail(to: @user.email, subject: 'Viewing Party details')
+    @hosts.each do |host| 
+      mail(to: host.email, subject: 'Viewing Party details')
+    end
   end
 
-  def party_email_guests(host, guests, party_info)
-    @user = host
-    @guests = guests
-    @party_info = party_info
+  def party_guests_email(party)
+    @host = party.host.first
+    @guests = party.guests
+    @movie_title = party.movie.title
+    @party = party
     @guests.each do |guest|
       mail(to: guest.email, subject: 'You are invited to Viewing Party')
     end

@@ -19,8 +19,9 @@ class PartiesController < ApplicationController
       flash[:notice] = 'You have made a new party!'
       redirect_to dashboard_user_path(current_user)
       PartiesUser.create!(party_id: @party.id, user_id: current_user.id, host: true)
-      UserMailer.party_email_host(@party).deliver_now
       invite_guests if params['User']
+      UserMailer.party_host_email(@party).deliver_now
+      UserMailer.party_guests_email(@party).deliver_now
     else
       flash[:notice] = 'Please complete all forms'
       render :new, action: @party
